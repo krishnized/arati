@@ -1,3 +1,3 @@
 # arati
 
-* [Mangala arati](https://krishnized.org/arati/mangala)
+* [Mangala arati](https://krishnized.com/arati/mangala)
