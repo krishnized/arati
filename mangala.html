@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <title>Мангала Арати</title>
 
-<style src="https://unpkg.com/modern-normalize@1.0.0/modern-normalize.css"></style>
+<link rel="stylesheet" href="https://unpkg.com/modern-normalize@1.0.0/modern-normalize.css"/>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,500&family=Merriweather:wght@400&display=swap');
 
@@ -53,9 +53,21 @@
     margin: 0 auto;
     text-align: center;
   }
-
-  :root {
+  h1 {
     text-align: center;
+  }
+
+  article {
+    text-align: center;
+    margin: 0 2rem;
+  }
+  section {
+    margin: 2rem 0;
+  }
+  p {
+    max-width: 82ex;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   blockquote {
@@ -63,7 +75,6 @@
     font-weight: 500;
     font-size: 1.36rem;
     font-family: 'Lora', serif;
-    white-space: nowrap;
   }
   blockquote span {
     /* text-align-last: right; */
@@ -81,20 +92,13 @@
   }
 
   p.numerator {
-    /* margin: 0 0 0rem; */
+    margin-top: 0;
+    margin-bottom: 0;
   }
   p.numerator + blockquote {
-    margin-top: 0;
-  }
-  section {
-    margin: 2rem 0;
+    margin-top: 1rem;
   }
 
-  p {
-    max-width: 82ex;
-    margin-left: auto;
-    margin-right: auto;
-  }
 </style>
 
 
