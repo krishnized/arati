@@ -13,12 +13,12 @@
 
   @media screen and (min-width: 320px) {
     html {
-      font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
     }
   }
   @media screen and (min-width: 1000px) {
     html {
-      font-size: 28px;
+      font-size: 22px;
     }
   }
 
@@ -36,10 +36,7 @@
     line-height: 1.3;
   }
 
-  h1 {
-    margin-top: 0;
-    font-size: 1.802rem;
-  }
+  h1 {font-size: 1.802rem;}
 
   h2 {font-size: 1.602rem;}
 
@@ -60,8 +57,9 @@
     color: #000000;
     background: linear-gradient(to bottom, rgb(251 207 207 / 95%), rgb(252 230 230 / 92%)), url(./img/peacock.jpg);
     background-attachment: fixed;
-    background-position: bottom;
+    background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
   }
 
   p {margin-bottom: 1rem;}
@@ -74,11 +72,14 @@
 
   article {
     text-align: center;
-    margin: 0 2rem;
+    margin: 0 2vmin;
   }
   section {
     margin: 2rem 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   article p {
     max-width: 82ex;
@@ -90,6 +91,7 @@
     margin-left: auto;
     margin-right: auto;
     border: .66rem solid white;
+    max-width: 100%;
   }
 
   blockquote {
@@ -97,12 +99,23 @@
     font-weight: 500;
     font-size: 1.266rem;
     font-family: 'Lora', serif;
+    margin: 1em auto;
+    padding: 0 4vmin;
+    max-width: 48ch;
   }
-  blockquote span {
+  .line {
+    display: block;
+    line-height: 1.266;
+    margin-bottom: .5em;
+  }
+  .line {
     /* text-align-last: right; */
   }
-  blockquote span:first-line {
+  .line:first-line {
     /* text-align-last: center; */
+  }
+  .line:last-child {
+    margin-bottom: 0;
   }
 
   sup {
@@ -129,15 +142,7 @@
     margin-top: 1rem;
   }
 
-  .second-line {
-    top: -.5ex;
-    display: inline-block;
-    position: relative;
-    margin-bottom: .5ex;
-  }
-
-
-  blockquote q::before, blockquote q::after {content: '';}
+  /* blockquote q::before, blockquote q::after {content: '';} */
 
   details > summary { list-style-type: none;}
   details > summary::-webkit-details-marker, details > summary::marker { display: none; }
@@ -168,16 +173,16 @@
 <section id="gurvastaka-1">
 <a href="#gurvastaka-1" class="numerator">1</a>
 <blockquote lang="en">
-<q title="saḿsāra – (of) material existence">Самсāра</q>-<q title="dāvā-anala – (by) the forest fire">дāвāнала</q>-<q title="līḍha – afflicted">лӣдха</q>-<q title="loka – the people">лока</q><br>
-<q title="trāṇāya – to deliver">Трāнāйа</q> <q title="kāruṇya – of mercy">кāрунйа</q>-<q title="ghanāghana-tvam – the quality of a cloud">гханāгханатвам</q><br>
-<q title="prāptasya – who has obtained">Прāптасйа</q> <q title="kalyāṇa – auspicious">калйāна</q>-<q title="guṇa – (of) qualities; arṇavasya – who is an ocean">гунāрнавасйа</q><br>
-<q title="vande – I offer obeisances">Ванде</q> <q title="guroḥ – of my spiritual master">гурох</q> <q title="śrī – auspicious">шри</q> <q title="caraṇa-aravindam – unto the lotus feet">чаранāравиндам</q><br>
+<span class="line"><i title="saḿsāra – (of) material existence">Самсāра</i>-<i title="dāvā-anala – (by) the forest fire">дāвāнала</i>-<i title="līḍha – afflicted">лӣдха</i>-<i title="loka – the people">лока</i><br></span>
+<span class="line"><i title="trāṇāya – to deliver">Трāнāйа</i> <i title="kāruṇya – of mercy">кāрунйа</i>-<i title="ghanāghana-tvam – the quality of a cloud">гханāгханатвам</i></span>
+<span class="line"><i title="prāptasya – who has obtained">Прāптасйа</i> <i title="kalyāṇa – auspicious">калйāна</i>-<i title="guṇa – (of) qualities; arṇavasya – who is an ocean">гунāрнавасйа</i></span>
+<span class="line"><i title="vande – I offer obeisances">Ванде</i> <i title="guroḥ – of my spiritual master">гурох</i> <i title="śrī – auspicious">шри</i> <i title="caraṇa-aravindam – unto the lotus feet">чаранāравиндам</i></span>
 </blockquote>
 <blockquote lang="ru">
-<q title="самāра – материального мира">Самсāра</q>-<q title="дāвā-анала – лесным огнем">дāвāнала</q>-<q title="лӣдха – охваченные">лӣдха</q>-<q title="лока – люди">лока</q><br>
-<q title="трāнāйа – являть">Трāнāйа</q> <q title="кāрунйа – милость">кāрунйа</q>-<q title="гханāгхана-твам – как облако">гханāгханатвам</q><br>
-<q title="прāптасйа – получивший">Прāптасйа</q> <q title="калйāна – благословение">калйāна</q>-<q title="гуна – качеств; арнавасйа – океан">гунāрнавасйа</q><br>
-<q title="ванде – я отдаю поклон">Ванде</q> <q title="гурох – духовного учителя">гурох</q> <q title="шрӣ – благоприятным">шрӣ</q> <q title="чарана-аравиндам – лотусным стопам">чаранāравиндам</q><br>
+<span class="line"><i title="самāра – материального мира">Самсāра</i>-<i title="дāвā-анала – лесным огнем">дāвāнала</i>-<i title="лӣдха – охваченные">лӣдха</i>-<i title="лока – люди">лока</i></span>
+<span class="line"><i title="трāнāйа – являть">Трāнāйа</i> <i title="кāрунйа – милость">кāрунйа</i>-<i title="гханāгхана-твам – как облако">гханāгханатвам</i></span>
+<span class="line"><i title="прāптасйа – получивший">Прāптасйа</i> <i title="калйāна – благословение">калйāна</i>-<i title="гуна – качеств; арнавасйа – океан">гунāрнавасйа</i></span>
+<span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох – духовного учителя">гурох</i> <i title="шрӣ – благоприятным">шрӣ</i> <i title="чарана-аравиндам – лотусным стопам">чаранāравиндам</i></span>
 </blockquote>
 <details open>
 <summary></summary>
@@ -190,10 +195,10 @@
 <section id="gurvastaka-2">
 <a href="#gurvastaka-2" class="numerator">2</a>
 <blockquote>
-Махāпрабхох киртана-нритйа-гита<br>
-Вāдитра-мāдйан-манасо расена<br>
-Ромāнча-кампāшру-таранга-бхāджо<br>
-<q title="ванде – я отдаю поклон">Ванде</q> <q title="гурох – духовного учителя">гурох</q> <q title="шрӣ – благоприятным">шрӣ</q> <q title="чарана-аравиндам – лотусным стопам">чаранāравиндам</q><br>
+<span class="line"><i>Махāпрабхох</i> <i>киртана</i>-<i>нритйа</i>-<i>гита</i></span>
+<span class="line"><i>Вāдитра</i>-<i>мāдйан</i>-<i>манасо</i> <i>расена</i></span>
+<span class="line">Ромāнча-кампāшру-таранга‑бхāджо</span>
+<span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох – духовного учителя">гурох</i> <i title="шрӣ – благоприятным">шрӣ</i> <i title="чарана-аравиндам – лотусным стопам">чаранāравиндам</i></span>
 </blockquote>
 <p>
 Движение санкиртаны Господа Чайтаньи Махапрабху — источник непреходящей радости для духовного учителя, который порой повторяет святое имя, порой танцует, охваченный экстазом, а порой поет и играет на музыкальных инструментах. Его ум наслаждается нектаром чистой преданности, и потому волосы на его теле временами встают дыбом, по телу пробегает дрожь, а слезы ручьями льются из глаз. В глубоком почтении я склоняюсь к лотосным стопам такого духовного учителя.
@@ -203,10 +208,10 @@
 <section id="gurvastaka-3">
 <a href="#gurvastaka-3" class="numerator">3</a>
 <blockquote>
-Шрӣ-виграхāрāдхана-нитйа-нāнā<br>
-Шрингāра-тан-мандира-мāрджанāдау<br>
-Йуктасйа бхактāмш ча нийунджато пи<br>
-<q title="ванде – я отдаю поклон">Ванде</q> <q title="гурох – духовного учителя">гурох</q> <q title="шрӣ – благоприятным">шрӣ</q> <q title="чарана-аравиндам – лотусным стопам">чаранāравиндам</q><br>
+<span class="line">Шрӣ-виграхāрāдхана-нитйа-нāнā</span>
+<span class="line">Шрингāра-тан-мандира-мāрджанāдау</span>
+<span class="line">Йуктасйа бхактāмш ча нийунджато пи</span>
+<span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох – духовного учителя">гурох</i> <i title="шрӣ – благоприятным">шрӣ</i> <i title="чарана-аравиндам – лотусным стопам">чаранāравиндам</i></span>
 </blockquote>
 <p>
 Всегда занятый поклонением Шри Шри Радхе и Кришне в храме, духовный учитель вовлекает в него также своих учеников. Они облачают Божества в прекрасные одежды, надевают на Них украшения, моют Их храм и занимаются другими видами служения, поклоняясь таким образом Господу. В глубоком почтении я склоняюсь к лотосным стопам такого духовного учителя.
@@ -216,10 +221,10 @@
 <section id="gurvastaka-4">
 <a href="#gurvastaka-4" class="numerator">4</a>
 <blockquote>
-Чатур-видха-шрӣ-бхагават-прасāда<br>
-Свāдв-анна-триптāн хари-бхакта-сангхāн<br>
-Критвайва триптим бхаджатах садаива<br>
-<q title="ванде – я отдаю поклон">Ванде</q> <q title="гурох – духовного учителя">гурох</q> <q title="шрӣ – благоприятным">шрӣ</q> <q title="чарана-аравиндам – лотусным стопам">чаранāравиндам</q><br>
+<span class="line">Чатур-видха-шрӣ-бхагават-прасāда</span>
+<span class="line">Свāдв-анна-триптāн хари-бхакта-сангхāн</span>
+<span class="line">Критвайва триптим бхаджатах садаива</span>
+<span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох – духовного учителя">гурох</i> <i title="шрӣ – благоприятным">шрӣ</i> <i title="чарана-аравиндам – лотусным стопам">чаранāравиндам</i></span>
 </blockquote>
 <p>
 Духовный учитель предлагает Кришне чудесную пищу четырех видов. И когда духовный учитель видит, что преданные, вкусив бхагават-прасада, полностью удовлетворены, он испытывает радость. В глубоком почтении я склоняюсь к лотосным стопам такого духовного учителя.
@@ -229,10 +234,10 @@
 <section id="gurvastaka-5">
 <a href="#gurvastaka-5" class="numerator">5</a>
 <blockquote>
-Шрӣ-рāдхика-мāдхавайор апāра<br>
-Мāдхурйа-лилā-гуна-рупа-нāмнāм<br>
-Прати-кшанāсвāдана-лолупасйа<br>
-<q title="ванде – я отдаю поклон">Ванде</q> <q title="гурох – духовного учителя">гурох</q> <q title="шрӣ – благоприятным">шрӣ</q> <q title="чарана-аравиндам – лотусным стопам">чаранāравиндам</q><br>
+<span class="line">Шрӣ-рāдхика-мāдхавайор апāра</span>
+<span class="line">Мāдхурйа-лилā-гуна-рупа-нāмнāм</span>
+<span class="line">Прати-кшанāсвāдана-лолупасйа</span>
+<span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох – духовного учителя">гурох</i> <i title="шрӣ – благоприятным">шрӣ</i> <i title="чарана-аравиндам – лотусным стопам">чаранāравиндам</i></span>
 </blockquote>
 <p>
 Духовный учитель всегда жаждет слушать повествования о бесчисленных любовных играх Радхики и Мадхавы, Их имена и описания Их качеств и форм и всегда готов воспевать Их. Духовный учитель жаждет наслаждаться этим непрестанно, и потому я в глубоком почтении склоняюсь к лотосным стопам такого духовного учителя.
@@ -242,10 +247,10 @@
 <section id="gurvastaka-6">
 <a href="#gurvastaka-6" class="numerator">6</a>
 <blockquote>
-Никунджа-йуно рати-кели-сиддхйаи<br>
-Йā йāлибхир йуктир апекшанийā<br>
-Татрāти-дāкшйāд ати-валлабхасйа<br>
-<q title="ванде – я отдаю поклон">Ванде</q> <q title="гурох – духовного учителя">гурох</q> <q title="шрӣ – благоприятным">шрӣ</q> <q title="чарана-аравиндам – лотусным стопам">чаранāравиндам</q><br>
+<span class="line">Никунджа-йуно рати-кели-сиддхйаи</span>
+<span class="line">Йā йāлибхир йуктир апекшанийā</span>
+<span class="line">Татрāти-дāкшйāд ати-валлабхасйа</span>
+<span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох – духовного учителя">гурох</i> <i title="шрӣ – благоприятным">шрӣ</i> <i title="чарана-аравиндам – лотусным стопам">чаранāравиндам</i></span>
 </blockquote>
 <p>
 Духовный учитель очень дорог Господу Кришне, ибо он очень умело помогает гопи, которые, проявляя необыкновенное искусство, делают в рощах Вриндаваны различные приготовления, чтобы довести любовные игры Радхи и Кришны до совершенства. В глубочайшем смирении я склоняюсь к лотосным стопам такого духовного учителя.
@@ -255,10 +260,10 @@
 <section id="gurvastaka-7">
 <a href="#gurvastaka-7" class="numerator">7</a>
 <blockquote>
-Сакшāд-дхаритвена самаста-шāстраир<br>
-Уктас татхā бхāвйата эва садбхих<br>
-Кинту прабхор йах прийа эва тасйа<br>
-<q title="ванде – я отдаю поклон">Ванде</q> <q title="гурох – духовного учителя">гурох</q> <q title="шрӣ – благоприятным">шрӣ</q> <q title="чарана-аравиндам – лотусным стопам">чаранāравиндам</q><br>
+<span class="line">Сакшāд-дхаритвена самаста-шāстраир</span>
+<span class="line">Уктас татхā бхāвйата эва садбхих</span>
+<span class="line">Кинту прабхор йах прийа эва тасйа</span>
+<span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох – духовного учителя">гурох</i> <i title="шрӣ – благоприятным">шрӣ</i> <i title="чарана-аравиндам – лотусным стопам">чаранāравиндам</i></span>
 </blockquote>
 <p>
 Духовному учителю следует оказывать то же почтение, что и Верховному Господу, ибо он — Его ближайший слуга. Так гласят все богооткровенные писания, и этому указанию следуют все авторитеты. Духовный учитель — истинный представитель Шри Хари (Кришны), и я в глубоком почтении склоняюсь к его лотосным стопам.
@@ -268,10 +273,10 @@
 <section id="gurvastaka-8">
 <a href="#gurvastaka-8" class="numerator">8</a>
 <blockquote>
-Йасйа прасāдāд бхагавад-прасāдо<br>
-Йасйāпрасāдāн на гатих кутóпи<br>
-Дхйāйан стувамс тасйа йашас три-сандхйам<br>
-<q title="ванде – я отдаю поклон">Ванде</q> <q title="гурох – духовного учителя">гурох</q> <q title="шрӣ – благоприятным">шрӣ</q> <q title="чарана-аравиндам – лотусным стопам">чаранāравиндам</q><br>
+<span class="line">Йасйа прасāдāд бхагавад-прасāдо</span>
+<span class="line">Йасйāпрасāдāн на гатих кутóпи</span>
+<span class="line">Дхйāйан стувамс тасйа йашас три-сандхйам</span>
+<span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох – духовного учителя">гурох</i> <i title="шрӣ – благоприятным">шрӣ</i> <i title="чарана-аравиндам – лотусным стопам">чаранāравиндам</i></span>
 </blockquote>
 <p>
 Благословение Кришны можно обрести лишь по милости духовного учителя. Без его милости любые попытки достичь совершенства обречены на провал. Поэтому я должен всегда помнить о своем духовном учителе и прославлять его. Не меньше трех раз в день должен я склоняться в глубоком почтении к лотосным стопам своего духовного учителя.
@@ -289,10 +294,10 @@
 <a href="#pranama-1" class="numerator">1</a>
 <img loading="lazy" src="https://github.com/krishnized/org/blob/master/prabhupada.png?raw=true" width="320">
 <blockquote>
-Нама Ом Вишну-паāдāйа<br>
-Кршна-прештхāйа бхӯ-тале<br>
-Шрӣмате бхактиведāнта-<br>
-Свāмин ити нāмине
+<span class="line">Нама Ом Вишну-паāдāйа</span>
+<span class="line">Кршна-прештхāйа бхӯ-тале</span>
+<span class="line">Шрӣмате бхактиведāнта-</span>
+<span class="line">Свāмин ити нāмине</span>
 </blockquote>
 <p>
 В глубоком почтении я склоняюсь перед Его Божественной Милостью А. Ч. Бхактиведантой Свами Прабхупадой, который очень дорог Господу Кришне, ибо для него нет иного прибежища, кроме лотосных стоп Господа.
@@ -302,10 +307,10 @@
 <section id="pranama-2">
 <a href="#pranama-2" class="numerator">2</a>
 <blockquote>
-Намас те сāрасвате деве<br>
-Гаура-вāнӣ-прачāрине<br>
-Нирвишеша-шӯнйавāди<br>
-Пāшчāтйа-деша-тāрине
+<span class="line">Намас те сāрасвате деве</span>
+<span class="line">Гаура-вāнӣ-прачāрине</span>
+<span class="line">Нирвишеша-шӯнйавāди</span>
+<span class="line">Пāшчāтйа-деша-тāрине</span>
 </blockquote>
 <p>
 О духовный учитель, слуга Сарасвати Госвами, мы склоняемся перед тобой в глубоком почтении. Ты милостиво проповедуешь учение Господа Чайтаньядевы и несешь освобождение странам Запада, в котором широко распространился имперсонализм и философия пустоты.
@@ -320,10 +325,10 @@
 <img loading="lazy" src="https://images.assettype.com/indynetwork%2F2017-09%2Fb841bbcc-2d97-453f-8b7e-be38404d9832%2FCover%20Photo.jpg?w=1500" width="480">
 
 <blockquote>
-(джайа) Шрӣ-Кришна-Чаитанйа<br>
-Прабху Нитйāнанда<br>
-Шрӣ-Адваита Гадāдхара<br>
-Шрӣвāсāди Гаура-бхакта-вринда
+<span class="line">(джайа) Шрӣ-Кришна-Чаитанйа</span>
+<span class="line">Прабху Нитйāнанда</span>
+<span class="line">Шрӣ-Адваита Гадāдхара</span>
+<span class="line">Шрӣвāсāди Гаура-бхакта-вринда</span>
 </blockquote>
 <p>
 Я выражаю свое глубокое почтение Шри Кришне Чайтанье, Прабху Нитьянанде, Шри Адвайте, Гададхаре, Шривасе и всем остальным, следующим путем преданного служения.
@@ -337,10 +342,10 @@
 <img loading="lazy" src="https://hijodevecino.net/wp-content/uploads/2013/08/Lord_Krishna_with_flute.jpg" width="320">
 
 <blockquote>
-Харе Кришна Харе Кришна<br>
-Кришна Кришна Харе Харе<br>
-Харе Рама Харе Рама<br>
-Рама Рама Харе Харе
+<span class="line">Харе Кришна Харе Кришна</span>
+<span class="line">Кришна Кришна Харе Харе</span>
+<span class="line">Харе Рама Харе Рама</span>
+<span class="line">Рама Рама Харе Харе</span>
 </blockquote>
 <p>
 О всепривлекающий, о всерадующий Господь, о, энергия Господа, прошу, позволь мне преданно служить Тебе!
@@ -355,9 +360,9 @@
   <a href="#prema-dhavani-1" class="numerator">1</a>
   <img loading="lazy" src="https://storage.ning.com/topology/rest/1.0/file/get/2525182088?profile=original"/>
   <blockquote>
-  Джайа Ом Вишну-пада парамахамса<br>
-  Паривраджакачарйа аштоттара-шата<br>
-  Шрӣ Шрӣмад Абхайа-Чаранаравинда<br>
+  Джайа Ом Вишну-пада парамахамса
+  Паривраджакачарйа аштоттара-шата
+  Шрӣ Шрӣмад Абхайа-Чаранаравинда
   Бхактиведанта Свами Махараджа Прабхупада<br>
   <small>— кй джайа!</small>
   </blockquote>
@@ -370,9 +375,9 @@
   <a href="#prema-dhavani-2" class="numerator">2</a>
   <img loading="lazy" src="https://storage.ning.com/topology/rest/1.0/file/get/3674244779?profile=original"/>
   <blockquote>
-  Джайа Ом Вишну-пада парамахамса<br>
-  Паривраджакачарйа аштоттара-шата<br>
-  Шрӣ Шрӣмад Бхактисиддханта Сарасвати<br>
+  Джайа Ом Вишну-пада парамахамса
+  Паривраджакачарйа аштоттара-шата
+  Шрӣ Шрӣмад Бхактисиддханта Сарасвати
   Госвами Махараджа Прабхупада<br>
   <small>— кй джайа!</small>
   </blockquote>
@@ -385,7 +390,7 @@
   <a href="#prema-dhavani-3" class="numerator">3</a>
   <img loading="lazy" width="320px" src="https://i2.wp.com/puskarpaintings.com/w/wp-content/uploads/2015/06/Guru_Gaurakishor_updated.jpg?fit=1607%2C2048"/>
   <blockquote>
-  Джайа Ом Вишну-пада Шрӣла Гауракшиора<br>
+  Джайа Ом Вишну-пада Шрӣла Гауракшиора
   даса Бабаджи Махараджа<br>
   <small>— кй джайа!</small>
   </blockquote>
@@ -398,7 +403,7 @@
   <a href="#prema-dhavani-4" class="numerator">4</a>
   <img loading="lazy" src="https://storage.ning.com/topology/rest/1.0/file/get/3674244903?profile=original"/>
   <blockquote>
-  Джайа Ом Вишну-пада шрӣла Саччидананда<br>
+  Джайа Ом Вишну-пада шрӣла Саччидананда
   Бхактивинода Тхакура<br>
   <small>— кй джайа!</small>
   </blockquote>
@@ -411,7 +416,7 @@
   <a href="#prema-dhavani-5" class="numerator">5</a>
   <img loading="lazy" width="300px" src="https://lightofgodhead.com/logstaging/wp-content/uploads/2018/02/shrila-dzhagannath-das-babadzhi-maharadzh.jpg"/>
   <blockquote>
-  Джайа Ом Вишну-пада вайшнава-сарвабхаума<br>
+  Джайа Ом Вишну-пада вайшнава-сарвабхаума
   Шрӣла Джаганнатха даса Бабаджи Махараджа<br>
   <small>— кй джайа!</small>
   </blockquote>
@@ -424,8 +429,8 @@
   <a href="#prema-dhavani-6" class="numerator">6</a>
   <img loading="lazy" src="https://i.pinimg.com/originals/76/ae/bd/76aebd8959a94f39dcb2a8dac8658ec2.jpg"/>
   <blockquote>
-  Джайа Шрӣ Рупа Санатана Бхатта Рагхунатха<br>
-  Шрӣ Джива Гопала Бхатта даса Рагхунатха<br>
+  Джайа Шрӣ Рупа Санатана Бхатта Рагхунатха
+  Шрӣ Джива Гопала Бхатта даса Рагхунатха
   Шад Госвами прабху<br>
   <small>— кй джайа!</small>
   </blockquote>
@@ -450,8 +455,8 @@
   <a href="#prema-dhavani-8" class="numerator">8</a>
   <img loading="lazy" width="320" src="http://www.harekrsna.de/artikel/panca-tattva/Panca-Tattva_b.jpg">
   <blockquote>
-  Премсе кахо Шрӣ-Кришна-Чаитанйа<br>
-  Прабху Нитйананда Шрӣ Адваита Гададхара<br>
+  Премсе кахо Шрӣ-Кришна-Чаитанйа
+  Прабху Нитйананда Шрӣ Адваита Гададхара
   Шрӣвасади Гаура-бхакта-вринда<br>
   <small>— кй джайа!</small>
   </blockquote>
@@ -464,7 +469,7 @@
   <a href="#prema-dhavani-9" class="numerator">9</a>
   <img loading="lazy" src="https://3.bp.blogspot.com/-BsCjSjFrA6Y/TmPHFjdzQWI/AAAAAAAABKs/A77IUg0tD2w/s1600/41198_1492426465549_1080630638_1414126_1092880_n.jpg">
   <blockquote>
-  Шрӣ Шрӣ Радха-Кршна, Гопа-Гопинатха,<br>
+  Шрӣ Шрӣ Радха-Кршна, Гопа-Гопинатха,
   Шйама Кунда, Радха-Кунда, Гириговардхана<br>
   <small>— кй джайа!</small>
   </blockquote>
