@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "makefont": "makeotf -ff ./font/diacritics.fea -f ./font/Lora-original.ttf -o ./font/Lora.otf"
+  }
+}
