@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Мангала Арати</title>
+<title lang="ru">Мангала Арати</title>
+<title lang="en">Mangala Arati</title>
 <link rel="stylesheet" href="https://unpkg.com/modern-normalize@1.0.0/modern-normalize.css"/>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
@@ -110,7 +111,7 @@
     border: 2vmin solid white;
     max-width: 100%;
     max-height: 64vh;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   blockquote {
@@ -199,12 +200,20 @@
 
 </style>
 
+<script>
+  // read lang from hash
+  const lang = location.hash.slice(1)
+  document.documentElement.setAttribute('lang', lang)
+  window.addEventListener('hashchange', e=> document.documentElement.setAttribute('lang', location.hash.slice(1)))
+</script>
 
-<h1>Мангала Арати</h1>
+<h1 lang="ru">Мангала Арати</h1>
+<h1 lang="en">Mangala Arati</h1>
 
 <article id="gurvastaka" rel="http://kksongs.org/songs/s/samsaradavanala.html">
 <img id="bg" src="./img/gurvastaka.jpg"/>
 <h2 lang="ru">Шри Шри Гурваштака<!--<small>(ист. Ставамрита Лахари)</small>--></h2>
+<h2 lang="en">Sri Gurvastakam<!--<small>(ист. Ставамрита Лахари)</small>--></h2>
 
 <p hidden><small>Примеры: <a href="https://archive.org/details/SrilaPrabhupada-SriSriGurvastakam">Прабхупада 1</a>, <a href="https://youtu.be/MJg7guWfpE4">Прабхупада 2</a>, <a href="https://archive.org/details/KKS_Bhajans-Gurvastakam/KKS_Bhajan-Gurvastakam_28-apr-2007_Simhachalam_de.mp3">Кадамба</a>, <a href="https://youtu.be/yhs309LBrKE">Krishna</a></small></p>
 
@@ -216,102 +225,169 @@
 <span class="line"><i title="пра̄птасйа – получивший">Пра̄птасйа</i> <i title="калйа̄на – благословение">калйа̄н̣а</i>-<i title="гун̣а – качеств; арн̣авасйа – океан">гун̣а̄рн̣авасйа</i></span>
 <span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох̣ – духовного учителя">гурох̣</i> <i title="ш́рӣ – благоприятным">ш́рӣ</i>-<i title="чаран̣а-аравиндам – лотусным стопам">чаран̣а̄равиндам</i></span>
 </blockquote>
-<details open>
-<summary></summary>
-<p>
+<blockquote lang="en" class="lower">
+<span class="line">saḿsāra-dāvānala-līḍha-loka-</span>
+<span class="line">trāṇāya kāruṇya-ghanāghanatvam</span>
+<span class="line">prāptasya kalyāṇa-guṇārṇavasya</span>
+<span class="line">vande guroḥ śrī-caraṇāravindam</span>
+</blockquote>
+<p lang="ru">
 Духовный учитель получает благословение из океана милости. Подобно тому как облако, проливающее дождь, гасит лесной пожар, духовный учитель гасит пылающий огонь материального существования и спасает людей, охваченных этим пламенем. Такой духовный учитель — океан благих качеств, и я в глубоком почтении склоняюсь к его лотосным стопам.
 </p>
-</details>
+<p lang="en">
+The spiritual master is receiving benediction from the ocean of mercy. Just as a cloud pours water on a forest fire to extinguish it, so the spiritual master delivers the materially afflicted world by extinguishing the blazing fire of material existence. I offer my respectful obeisances unto the lotus feet of such a spiritual master, who is an ocean of auspicious qualities.
+</p>
 </section>
 
 <section id="gurvastaka-2">
 <a href="#gurvastaka-2" class="numerator">2</a>
-<blockquote class="lower">
+<blockquote class="lower" lang="ru">
 <span class="line"><i>Маха̄прабхох̣</i> <span class="nobr"><i>кӣртана</i>-<i>нр̣итйа</i>-<i>гӣта</i></span></span>
 <span class="line"><i>Ва̄дитра</i>-<i>ма̄дйан</i>-<span class="nobr"><i>манасо</i> <i>расена</i></span></span>
 <span class="line">Рома̄н̃ча-кампа̄ш́ру <span class="nobr">таран̇га-бха̄джо</span></span>
 <span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох̣ – духовного учителя">гурох̣</i> <i title="ш́рӣ – благоприятным">ш́рӣ</i>-<i title="чаран̣а-аравиндам – лотусным стопам">чаран̣а̄равиндам</i></span>
 </blockquote>
-<p>
+<blockquote class="lower" lang="en">
+<span class="line">mahāprabhoḥ kīrtana-nṛtya-gīta-</span>
+<span class="line">vāditra-mādyan-manaso rasena</span>
+<span class="line">romāñca -kampāśru-tarańga-bhājo</span>
+<span class="line">vande guroḥ śrī-caraṇāravindam</span>
+</blockquote>
+<p lang="ru">
 Движение санкиртаны Господа Чайтаньи Махапрабху — источник непреходящей радости для духовного учителя, который порой повторяет святое имя, порой танцует, охваченный экстазом, а порой поет и играет на музыкальных инструментах. Его ум наслаждается нектаром чистой преданности, и потому волосы на его теле временами встают дыбом, по телу пробегает дрожь, а слезы ручьями льются из глаз. В глубоком почтении я склоняюсь к лотосным стопам такого духовного учителя.
 </p>
+<p lang="en">Chanting the holy name, dancing in ecstasy, singing, and playing musical instruments, the spiritual master is always gladdened by the sankirtana movement of Lord Caitanya Mahaprabhu. Because he is relishing the mellows of pure devotion within his mind, sometimes his hair stands on end, he feels quivering in his body, and tears flow from his eyes like waves. I offer my respectful obeisances unto the lotus feet of such a spiritual master.</p>
 </section>
 
 <section id="gurvastaka-3">
 <a href="#gurvastaka-3" class="numerator">3</a>
-<blockquote class="lower">
+<blockquote class="lower" lang="ru">
 <span class="line">Ш́рӣ-виграха̄ра̄дхана-<span class="nobr">нитйа-на̄на̄</span></span>
 <span class="line">Ш́р̣инга̄ра тан-мандира ма̄рджана̄дау</span>
 <span class="line">Йуктасйа бхакта̄м̇ш́ ча нийун̃джато&nbsp;’пи</span>
 <span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох̣ – духовного учителя">гурох̣</i> <i title="ш́рӣ – благоприятным">ш́рӣ</i>-<i title="чаран̣а-аравиндам – лотусным стопам">чаран̣а̄равиндам</i></span>
 </blockquote>
-<p>
+<blockquote class="lower" lang="en">
+<span class="line">śrī-vigrahārādhana-nitya-nānā-</span>
+<span class="line">śṛńgāra-tan-mandira-mārjanādau</span>
+<span class="line">yuktasya bhaktāḿś ca niyuñjato 'pi</span>
+<span class="line">vande guroḥ śrī-caraṇāravindam</span>
+</blockquote>
+<p lang="ru">
 Всегда занятый поклонением Шри Шри Радхе и Кришне в храме, духовный учитель вовлекает в него также своих учеников. Они облачают Божества в прекрасные одежды, надевают на Них украшения, моют Их храм и занимаются другими видами служения, поклоняясь таким образом Господу. В глубоком почтении я склоняюсь к лотосным стопам такого духовного учителя.
+</p>
+<p lang="en">
+The spiritual master is always engaged in the temple worship of Sri Sri Radha and Krsna. He also engages his disciples in such worship. They dress the Deities in beautiful clothes and ornaments, clean Their temple, and perform other similar worship of the Lord. I offer my respectful obeisances unto the lotus feet of such a spiritual master.
 </p>
 </section>
 
 <section id="gurvastaka-4">
 <a href="#gurvastaka-4" class="numerator">4</a>
-<blockquote class="lower">
+<blockquote class="lower" lang="ru">
 <span class="line">Чатур-видха-ш́рӣ-<span class="nobr">бхагават-праса̄да</span></span>
 <span class="line">Сва̄дв-анна-тр̣ипта̄н хари-<span class="nobr">бхакта-сан̇гха̄н</span></span>
 <span class="line">Кр̣итвайва тр̣иптим̇ бхаджатах̣&nbsp;садаива</span>
 <span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох̣ – духовного учителя">гурох̣</i> <i title="ш́рӣ – благоприятным">ш́рӣ</i>-<i title="чаран̣а-аравиндам – лотусным стопам">чаран̣а̄равиндам</i></span>
 </blockquote>
-<p>
+<blockquote class="lower" lang="en">
+<span class="line">catur-vidha-śrī-bhagavat-prasāda-</span>
+<span class="line">svādv-anna-tṛptān hari-bhakta-sańghān</span>
+<span class="line">kṛtvaiva tṛptiḿ bhajataḥ sadaiva</span>
+<span class="line">vande guroḥ śrī-caraṇāravindam</span>
+</blockquote>
+<p lang="ru">
 Духовный учитель предлагает Кришне чудесную пищу четырех видов. И когда духовный учитель видит, что преданные, вкусив бхагават-прасада, полностью удовлетворены, он испытывает радость. В глубоком почтении я склоняюсь к лотосным стопам такого духовного учителя.
+</p>
+<p lang="en">
+The spiritual master is always offering Krsna four kinds of delicious food [analyzed as that which is licked, chewed, drunk, and sucked]. When the spiritual master sees that the devotees are satisfied by eating bhagavat-prasada, he is satisfied. I offer my respectful obeisances unto the lotus feet of such a spiritual master.
 </p>
 </section>
 
 <section id="gurvastaka-5">
 <a href="#gurvastaka-5" class="numerator">5</a>
-<blockquote class="lower">
+<blockquote class="lower" lang="ru">
 <span class="line">Ш́рӣ-ра̄дхика̄-<span class="nobr">ма̄дхавайор апа̄ра</span></span>
 <span class="line">Ма̄дхурйа-лӣла̄-<span class="nobr">гун̣а-рӯпа-на̄мна̄м</span></span>
 <span class="line">Прати-кш̣ан̣а̄-<span class="nobr">сва̄дана лолупасйа</span></span>
 <span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох̣ – духовного учителя">гурох̣</i> <i title="ш́рӣ – благоприятным">ш́рӣ</i>-<i title="чаран̣а-аравиндам – лотусным стопам">чаран̣а̄равиндам</i></span>
 </blockquote>
-<p>
+<blockquote class="lower" lang="en">
+<span class="line">śrī-rādhikā-mādhavayor apāra-</span>
+<span class="line">mādhurya-līlā guṇa-rūpa-nāmnām</span>
+<span class="line">prati-kṣaṇāsvādana-lolupasya</span>
+<span class="line">vande guroḥ śrī-caraṇāravindam</span>
+</blockquote>
+<p lang="ru">
 Духовный учитель всегда жаждет слушать повествования о бесчисленных любовных играх Радхики и Мадхавы, Их имена и описания Их качеств и форм и всегда готов воспевать Их. Духовный учитель жаждет наслаждаться этим непрестанно, и потому я в глубоком почтении склоняюсь к лотосным стопам такого духовного учителя.
+</p>
+<p lang="en">
+The spiritual master is always eager to hear and chant about the unlimited conjugal pastimes of Radhika and Madhava, and Their qualities, names, and forms. The spiritual master aspires to relish these at every moment. I offer my respectful obeisances unto the lotus feet of such a spiritual master.
 </p>
 </section>
 
 <section id="gurvastaka-6">
 <a href="#gurvastaka-6" class="numerator">6</a>
-<blockquote class="lower">
+<blockquote class="lower" lang="ru">
 <span class="line">Никун̃джа-йӯно <span class="nobr">рати-кели-сиддхйаи</span></span>
 <span class="line">Йа̄ йа̄либхир <span class="nobr">йуктир апекш̣ан̣ӣйа̄</span></span>
 <span class="line">Татра̄ти-да̄кш̣йа̄д <span class="nobr">ати-валлабхасйа</span></span>
 <span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох̣ – духовного учителя">гурох̣</i> <i title="ш́рӣ – благоприятным">ш́рӣ</i>-<i title="чаран̣а-аравиндам – лотусным стопам">чаран̣а̄равиндам</i></span>
 </blockquote>
-<p>
+<blockquote class="lower" lang="en">
+<span class="line">nikuñja-yūno rati-keli-siddhyai</span>
+<span class="line">yā yālibhir yuktir apekṣaṇīyā</span>
+<span class="line">tatrāti-dākṣyād ati-vallabhasya</span>
+<span class="line">vande guroḥ śrī-caraṇāravindam</span>
+</blockquote>
+<p lang="ru">
 Духовный учитель очень дорог Господу Кришне, ибо он очень умело помогает гопи, которые, проявляя необыкновенное искусство, делают в рощах Вриндаваны различные приготовления, чтобы довести любовные игры Радхи и Кришны до совершенства. В глубочайшем смирении я склоняюсь к лотосным стопам такого духовного учителя.
+</p>
+<p lang="en">
+The spiritual master is very dear, because he is expert in assisting the gopis, who at different times make different tasteful arrangements for the perfection of Radha and Krsna's conjugal loving affairs within the groves of Vrndavana. I offer my most humble obeisances unto the lotus feet of such a spiritual master.
 </p>
 </section>
 
 <section id="gurvastaka-7">
 <a href="#gurvastaka-7" class="numerator">7</a>
-<blockquote class="lower">
+<blockquote class="lower" lang="ru">
 <span class="line">Сакш̣а̄д-харитвена <span class="nobr">самаста-ш́а̄страир</span></span>
 <span class="line">Уктас татха̄ <span class="nobr">бха̄вйата эва садбхих̣</span></span>
 <span class="line">Кинту прабхор йах̣ <span class="nobr">прийа эва тасйа</span></span>
 <span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох̣ – духовного учителя">гурох̣</i> <i title="ш́рӣ – благоприятным">ш́рӣ</i>-<i title="чаран̣а-аравиндам – лотусным стопам">чаран̣а̄равиндам</i></span>
 </blockquote>
-<p>
+<blockquote class="lower" lang="en">
+<span class="line">sākṣād-dharitvena samasta-śāstrair</span>
+<span class="line">uktas tathā bhāvyata eva sadbhiḥ</span>
+<span class="line">kintu prabhor yaḥ priya eva tasya</span>
+<span class="line">vande guroḥ śrī-caraṇāravindam</span>
+</blockquote>
+<p lang="ru">
 Духовному учителю следует оказывать то же почтение, что и Верховному Господу, ибо он — Его ближайший слуга. Так гласят все богооткровенные писания, и этому указанию следуют все авторитеты. Духовный учитель — истинный представитель Шри Хари (Кришны), и я в глубоком почтении склоняюсь к его лотосным стопам.
+</p>
+<p lang="en">
+The spiritual master is to be honored as much as the Supreme Lord, because he is the most confidential servitor of the Lord. This is acknowledged in all revealed scriptures and followed by all authorities. Therefore I offer my respectful obeisances unto the lotus feet of such a spiritual master, who is a bona fide representative of Sri Hari [Krsna].
 </p>
 </section>
 
 <section id="gurvastaka-8">
 <a href="#gurvastaka-8" class="numerator">8</a>
-<blockquote class="lower">
+<blockquote class="lower" lang="ru">
 <span class="line">Йасйа праса̄да̄д-<span class="nobr">бхагавад-праса̄дох̣</span></span>
 <span class="line">Йасйа̄праса̄да̄н <span class="nobr">на гатих̣ куто ’пи</span></span>
 <span class="line">Дхйа̄йам̇ стувам̇с тасйа <span class="nobr">йаш́ас три-сандхйам̇</span></span>
 <span class="line"><i title="ванде – я отдаю поклон">Ванде</i> <i title="гурох̣ – духовного учителя">гурох̣</i> <i title="ш́рӣ – благоприятным">ш́рӣ</i>-<i title="чаран̣а-аравиндам – лотусным стопам">чаран̣а̄равиндам</i></span>
 </blockquote>
-<p>
+<blockquote class="lower" lang="en">
+<span class="line">yasya prasādād bhagavat-prasādo</span>
+<span class="line">yasyāprasādān na gatiḥ kuto 'pi</span>
+<span class="line">dhyāyan stuvaḿs tasya yaśas tri-sandhyaḿ</span>
+<span class="line">vande guroḥ śrī-caraṇāravindam</span>
+</blockquote>
+<p lang="ru">
 Благословение Кришны можно обрести лишь по милости духовного учителя. Без его милости любые попытки достичь совершенства обречены на провал. Поэтому я должен всегда помнить о своем духовном учителе и прославлять его. Не меньше трех раз в день должен я склоняться в глубоком почтении к лотосным стопам своего духовного учителя.
+</p>
+<p lang="en">
+By the mercy of the spiritual master one receives the benediction of Krsna. Without the grace of the spiritual master, one cannot make any advancement. Therefore, I should always remember and praise the spiritual master. At least three times a day I should offer my respectful obeisances unto the lotus feet of my spiritual master.
 </p>
 </section>
 
@@ -319,14 +395,23 @@
 <a href="#gurvastaka-9" class="numerator">***</a>
 <blockquote class="">
 </blockquote>
-<blockquote class="lower">
+<blockquote class="lower" lang="ru">
 <span class="line">Ш́рӣмад-гурор аш̣т̣акам этад уччаир</span>
 <span class="line">Бра̄хме мухӯрте пат̣хати прайатна̄т</span>
 <span class="line">Йас тена вр̣инда̄вана на̄тха са̄кш̣а̄т-</span>
 <span class="line">Севаива лабхйа̄ джануш̣о ’нта эва</span>
 </blockquote>
-<p>
+<blockquote class="lower" lang="en">
+<span class="line">śrīmad-guror aṣṭakam etad uccair</span>
+<span class="line">brāhme muhūrte paṭhati prayatnāt</span>
+<span class="line">yas tena vṛndāvana-nātha sākṣāt</span>
+<span class="line">sevaiva labhyā januṣo’nta eva</span>
+</blockquote>
+<p lang="ru">
 Тот, кто с чистым сердцем воспевает эти восемь молитв духовному учителю во время брахма-мухурты (96 минут до восхода Солнца), в момент смерти обретает служение Кришне, Повелителю Вриндавана.
+</p>
+<p lang="en">
+  One who, with great care and alteration, loudly recites this beautiful prayer to the spiritual master during the Brahma-muhurta obtains direct service to Krsna, the Lord of Vrndavana, at the time of his death.
 </p>
 </section>
 
