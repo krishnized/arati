@@ -39,9 +39,11 @@
   }
 
   /* langs switch */
-  :lang(ru) :not(:lang(ru)) { display: none; }
-  :lang(en) :not(:lang(en)) { display: none; }
-  :lang(sa) :not(:lang(sa)) { display: none; }
+  :lang(ru) *:not(:lang(ru)) { display: none; }
+  :lang(en) *:not(:lang(en)) { display: none; }
+  :lang(sa) *:not(:lang(sa)) { display: none; }
+  :lang(hi) *:not(:lang(hi)) { display: none; }
+  :lang(in) *:not(:lang(in)) { display: none; }
 
 
   /* typographic scale */
@@ -202,9 +204,8 @@
 
 <script>
   // read lang from hash
-  const lang = location.hash.slice(1)
-  document.documentElement.setAttribute('lang', lang)
-  window.addEventListener('hashchange', e=> document.documentElement.setAttribute('lang', location.hash.slice(1)))
+  const params = new URLSearchParams(location.search)
+  document.documentElement.setAttribute('lang', params.get('lang'))
 </script>
 
 <h1 lang="ru">Мангала Арати</h1>
@@ -213,7 +214,10 @@
 <article id="gurvastaka" rel="http://kksongs.org/songs/s/samsaradavanala.html">
 <img id="bg" src="./img/gurvastaka.jpg"/>
 <h2 lang="ru">Шри Шри Гурваштака<!--<small>(ист. Ставамрита Лахари)</small>--></h2>
-<h2 lang="en">Sri Gurvastakam<!--<small>(ист. Ставамрита Лахари)</small>--></h2>
+<h2 lang="en">
+  Sri Sri Gurv-astakam<br/>
+  <small><em>by Srila Visvanatha Cakravarti Thakura, Stavamrita Lahari</em></small>
+</h2>
 
 <p hidden><small>Примеры: <a href="https://archive.org/details/SrilaPrabhupada-SriSriGurvastakam">Прабхупада 1</a>, <a href="https://youtu.be/MJg7guWfpE4">Прабхупада 2</a>, <a href="https://archive.org/details/KKS_Bhajans-Gurvastakam/KKS_Bhajan-Gurvastakam_28-apr-2007_Simhachalam_de.mp3">Кадамба</a>, <a href="https://youtu.be/yhs309LBrKE">Krishna</a></small></p>
 
@@ -230,6 +234,13 @@
 <span class="line">trāṇāya kāruṇya-ghanāghanatvam</span>
 <span class="line">prāptasya kalyāṇa-guṇārṇavasya</span>
 <span class="line">vande guroḥ śrī-caraṇāravindam</span>
+</blockquote>
+<blockquote lang="hi" class="lower">
+संसार-दावानल-लीढ-लोक-
+त्राणाय कारुण्य-घनाघनत्वम्
+प्राप्तस्य कल्याण-गुणार्णवस्य
+वन्दे गुरोः श्री-चरणारविन्दम्
+<!-- https://lyricstranslate.com/hi/atmasfera-samsaramangala-arati-lyrics.html -->
 </blockquote>
 <p lang="ru">
 Духовный учитель получает благословение из океана милости. Подобно тому как облако, проливающее дождь, гасит лесной пожар, духовный учитель гасит пылающий огонь материального существования и спасает людей, охваченных этим пламенем. Такой духовный учитель — океан благих качеств, и я в глубоком почтении склоняюсь к его лотосным стопам.
@@ -419,8 +430,14 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 
 
 <article id="pranama">
-<h2>Шрила Прабхупада пранати<br>
-<small>(пранама-мантра)</small></h2>
+<h2 lang="ru">
+  Шрила Прабхупада пранати<br>
+  <small>(пранама-мантра)</small>
+</h2>
+<h2 lang="en">
+  Śrīla Prabhupāda Praṇati<br/>
+  <small><em>(pranama mantra)</em></small>
+</h2>
 
 <section id="pranama-1">
 <a href="#pranama-1" class="numerator">
@@ -432,33 +449,52 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 नमस्ते सरस्वते देवे गौर वाणी प्रचारिणे,
 निर्विशेष शून्य-वादी पाश्चात्य देश तारिणे ।।
 </blockquote>
-<blockquote>
+<blockquote lang="ru">
 <span class="line">Нама Ом̇ Виш̣н̣у-па̄да̄йа</span>
 <span class="line">Кр̣ш̣н̣а-преш̣т̣ха̄йа бхӯ-тале</span>
 <span class="line">Ш́рӣмате Бхактиведа̄нта-</span>
 <span class="line">Сва̄мин ити на̄мине</span>
 </blockquote>
-<p>
+<blockquote lang="en">
+<span class="line">Nama oṁ Viṣṇu-pādāya</span>
+<span class="line">Kṛṣṇa-preṣṭhāya bhū-tale</span>
+<span class="line">Śrīmate Bhaktivedānta</span>
+<span class="line">-svāmin iti nāmine</span>
+</blockquote>
+<p lang="ru">
 В глубоком почтении я склоняюсь перед Его Божественной Милостью А. Ч. Бхактиведантой Свами Прабхупадой, который очень дорог Господу Кришне, ибо для него нет иного прибежища, кроме лотосных стоп Господа.
+</p>
+<p lang="en">
+I offer my respectful obeisances unto His Divine Grace A. C. Bhaktivedanta Swami Prabhupāda, who is very dear to Lord Kṛṣṇa, having taken shelter at His lotus feet.
 </p>
 </section>
 
 <section id="pranama-2">
-<blockquote>
+<blockquote lang="ru">
 <span class="line">Намас те Са̄расвате деве</span>
 <span class="line">Гаура-ва̄н̣ӣ-прача̄рин̣е</span>
 <span class="line">Нирвиш́еш̣а-ш́ӯнйава̄ди</span>
 <span class="line">Па̄ш́ча̄тйа-деш́а-та̄рин̣е</span>
 </blockquote>
-<p>
+<blockquote lang="en">
+<span class="line">Namas te Sārasvate deve</span>
+<span class="line">Gaura-vāṇī-pracāriṇe</span>
+<span class="line">nirviśeṣa-śūnyavādi</span>
+<span class="line">-pāścātya-deśa-tāriṇe</span>
+</blockquote>
+<p lang="ru">
 О духовный учитель, слуга Сарасвати Госвами, мы склоняемся перед тобой в глубоком почтении. Ты милостиво проповедуешь учение Господа Чайтаньядевы и несешь освобождение странам Запада, в котором широко распространился имперсонализм и философия пустоты.
+</p>
+<p lang="en">
+Our respectful obeisances are unto you, O spiritual master, servant of Sarasvatī Gosvāmī. You are kindly preaching the message of Lord Caitanyadeva and delivering the Western countries, which are filled with impersonalism and voidism.
 </p>
 </section>
 </article>
 
 
 <article id="panca-tattva">
-<h2>Панча-Таттва маха-мантра</h2>
+<h2 lang="ru">Панча-Таттва маха-мантра</h2>
+<h2 lang="en">Panca-tattva Maha Mantra</h2>
 
 <img loading="lazy" src="img/tattva-1.jpg">
 
@@ -466,54 +502,82 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 जय श्री कृष्ण चैतन्य, प्रभु नित्यानंद,
 श्री अद्वैत, गदाधर, श्रीवास आदि गौर भक्त वृन्द ।।
 </blockquote>
-<blockquote>
+<blockquote lang="ru">
 <span class="line">(джайа) Ш́рӣ-Кр̣иш̣н̣а-Чаитанйа</span>
 <span class="line">Прабху Нитйа̄нанда</span>
 <span class="line">Ш́рӣ-Адваита Гада̄дхара</span>
 <span class="line">Ш́рӣва̄са̄ди Гаура-<span class="nobr">бхакта-вр̣инда</span></span>
 </blockquote>
-<p>
+<blockquote lang="en">
+<span class="line">Śrī-Kṛṣṇa-Caitanya</span>
+<span class="line">Prabhu-Nityānanda</span>
+<span class="line">Śrī-Advaita Gadādhara</span>
+<span class="line">Śrīvāsādi-Gaura-bhakta-vṛnda</span>
+</blockquote>
+<p lang="ru">
 Я выражаю свое глубокое почтение Шри Кришне Чайтанье, Прабху Нитьянанде, Шри Адвайте, Гададхаре, Шривасе и всем остальным, следующим путем преданного служения.
+</p>
+<p lang="en">
+I offer my respectful obeisances unto Sri Caitanya Mahaprabhu, Lord Nityananda, Sri Advaita,
+Gadadhara Pandit, Srivas Thakur, and all the devotees of Lord Caitanya.
 </p>
 </article>
 
 
 <article id="mahamantra">
-<h2>Харе Кришна маха-мантра</h2>
+<h2 lang="ru">Харе Кришна Маха-мантра</h2>
+<h2 lang="en">Hare Krishna Mahā-mantra</h2>
 
 <img loading="lazy" src="./img/krishna-1.jpg">
 <blockquote hidden lang="in">
 हरे कृष्ण हरे कृष्ण, कृष्ण कृष्ण हरे हरे ।
 हरे राम हरे राम, राम राम हरे हरे ।।
 </blockquote>
-<blockquote>
+<blockquote lang="ru">
 <span class="line">Харе Кр̣иш̣н̣а Харе Кр̣иш̣н̣а</span>
 <span class="line">Кр̣иш̣н̣а Кр̣иш̣н̣а Харе Харе</span>
 <span class="line">Харе Ра̄ма Харе Ра̄ма</span>
 <span class="line">Ра̄ма Ра̄ма Харе Харе</span>
 </blockquote>
-<p>
+<blockquote lang="en">
+<span class="line">Hare Kṛṣṇa Hare Kṛṣṇa</span>
+<span class="line">Kṛṣṇa Kṛṣṇa Hare Hare</span>
+<span class="line">Hare Rāma Hare Rāma</span>
+<span class="line">Rāma Rāma Hare Hare</span>
+</blockquote>
+<p lang="ru">
 О всепривлекающий, о всерадующий Господь, о, энергия Господа, прошу, позволь мне преданно служить Тебе!
+</p>
+<p lang="en">
+Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional service.
 </p>
 </article>
 
 
 <article id="prema-dhavani">
-  <h2>Молитва према-дхвани</h2>
+  <h2 lang="ru">Молитва према-дхвани</h2>
 
   <section id="prema-dhavani-1">
   <a href="#prema-dhavani-1" class="numerator">
   <img loading="lazy" src="./img/prabhupada.jpg"/>
   </a>
-  <blockquote>
+  <blockquote lang="ru">
   Джайа Ом̇ Виш̣н̣у-па̄да парамахам̇са
   Паривра̄джака̄ча̄рйа аш̣т̣оттара-ш́ата
   Ш́рӣ Ш́рӣмад Абхайа-Чаранаравинда
   Бхактиведанта Свами Махараджа Прабхупа̄да<br>
   <small>— кӣ&nbsp;джайа!</small>
   </blockquote>
-  <p>
+  <blockquote lang="en">
+    Jaya Oṁ Viṣṇu-pāda paramahaṁsa parivrājakācārya aṣṭottara-śata Śrī Śrīmad His Divine Grace A.C. Bhaktivedānta Svāmī Mahārāja Prabhupāda<br>
+  <small>— kī&nbsp;jaya!</small>
+  <!-- https://theharekrishnamovement.org/category/prayers-verses/prema-dhvani-prayers-prayers-verses/ -->
+  </blockquote>
+  <p lang="ru">
    Вся слава ачарии Ом Вишну-паде 108 триданди Госвами Абхаю Чаранаравинде Свами Прабхупаде, путешествующему по всей Земле, проповедующему славу Хари, ачарье, который находится на высочайшем уровне санньясы и участвующему в вечных играх Господа.
+  </p>
+  <p lang="en">
+  108 glories to the wandering mendicant and topmost swanlike devotee, the great preceptor His Divine Grace A. C. Bhaktivedanta Swami Prabhupada, who has taken shelter at the feet of Lord Viṣṇu
   </p>
   </section>
 
@@ -521,15 +585,22 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <a href="#prema-dhavani-2" class="numerator">
   <img loading="lazy" src="./img/bhaktisiddhantha-color.jpg"/>
   </a>
-  <blockquote>
+  <blockquote lang="ru">
   Джайа Ом̇ Виш̣н̣у-па̄да парамахам̇са
   Паривра̄джака̄ча̄рйа аш̣т̣оттара-ш́ата
   Ш́рӣ Ш́рӣмад Бхактисиддханта Сарасватӣ
   Госва̄мӣ Махараджа Прабхупа̄да<br>
   <small>— кӣ&nbsp;джайа!</small>
   </blockquote>
-  <p>
+  <blockquote lang="en">
+  Jaya oṁ Viṣṇu-pāda paramahaṁsa parivrājakācārya aṣṭottara-śata Śrī Śrīmad Bhaktisiddhānta Sarasvatī Gosvāmī Mahārāja Prabhupāda<br>
+  <small>— kī&nbsp;jaya!</small>
+  </blockquote>
+  <p lang="ru">
   Вся слава ачарье Ом Вишну-пада 108 Триданди Госвами Бхактисиддханте Сарасвати Прабхупаде, который путешествует по всей земле, проповедуя славу Хари, и который находится на высочайшей ступени санньясы.
+  </p>
+  <p lang="en">
+  108 glories to the wandering mendicant and topmost swanlike devotee, the great preceptor His Divine Grace Srila Bhaktisiddhānta Sarasvatī Gosvami Maharaja Prabhupada, who has taken shelter at the feet of Lord Viṣṇu
   </p>
   </section>
 
@@ -537,13 +608,20 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <a href="#prema-dhavani-3" class="numerator">
   <img loading="lazy" src="./img/gaurakishor.jpg"/>
   </a>
-  <blockquote>
+  <blockquote lang="ru">
   Джайа Ом̇ Виш̣н̣у-па̄да Ш́рӣла Гауракишора
   даса Бабаджи Махараджа<br>
   <small>— кӣ&nbsp;джайа!</small>
   </blockquote>
-  <p>
+  <p lang="ru">
   Вся слава Шриле Гауракишору дасу Бабаджи!
+  </p>
+  <blockquote lang="en">
+  Jaya Om Visnu-pada Srila Gaurakisora Dasa Babaji Maharaja<br>
+  <small>— kī&nbsp;jaya!</small>
+  </blockquote>
+  <p lang="en">
+  All glories to Srila Gaurakisora dasa Babaji!
   </p>
   </section>
 
@@ -551,13 +629,20 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <a href="#prema-dhavani-4" class="numerator">
   <img loading="lazy" src="./img/bvthakur.jpg"/>
   </a>
-  <blockquote>
+  <blockquote lang="ru">
   Джайа Ом̇ Виш̣н̣у-па̄да Ш́рӣла Сач-чид-ананда
   Бхактивинода Тхакура<br>
   <small>— кӣ&nbsp;джайа!</small>
   </blockquote>
-  <p>
+  <p lang="ru">
   Вся слава Шриле Сач-чид-ананде Бхактивиноду Тхакуру!
+  </p>
+  <blockquote lang="en">
+  Jaya Om Visnu-pada Srila Saccidananda Bhaktivinoda Thakura<br>
+  <small>— kī&nbsp;jaya!</small>
+  </blockquote>
+  <p lang="en">
+  All glories to Srila Sac-cid-ananda Bhaktivinoda Thakura!
   </p>
   </section>
 
@@ -565,13 +650,20 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <a href="#prema-dhavani-5" class="numerator">
   <img loading="lazy" src="./img/jagannath-das.jpg"/>
   </a>
-  <blockquote>
+  <blockquote lang="ru">
   Джайа Ом̇ Виш̣н̣у-па̄да вайш̣н̣ава-са̄рвабхаума
   Ш́рӣла Джаганна̄тха да̄с Ба̄ба̄джӣ Маха̄ра̄джа<br>
   <small>— кӣ&nbsp;джайа!</small>
   </blockquote>
-  <p>
+  <p lang="ru">
   Вся слава Вайшнава Сарвабхаума Шриле Джаганнатхе дасу Бабаджи!
+  </p>
+  <blockquote lang="en">
+  Jaya Om Visnu-pada Vaisnava-Sarvabhauma Srila Jagannatha dasa Babaji Maharaja<br>
+  <small>— kī&nbsp;jaya!</small>
+  </blockquote>
+  <p lang="en">
+  All glories to Vaisnava-Sarvabhauma Srila Jagannatha dasa Babaji!
   </p>
   </section>
 
@@ -579,14 +671,21 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <a href="#prema-dhavani-6" class="numerator">
   <img loading="lazy" src="./img/goswamis.jpg"/>
   </a>
-  <blockquote>
+  <blockquote lang="ru">
   Джайа Ш́рӣ Рӯпа, Сана̄тана, Бхатта Рагхуна̄тха,
   Ш́рӣ Джӣва, Гопа̄ла Бхатта, Да̄са&nbsp;Рагхуна̄тха
   <span class="nobr">Шад-Госва̄мӣ Прабху</span><br>
   <small>— кӣ&nbsp;джайа!</small>
   </blockquote>
-  <p>
+  <p lang="ru">
   Вся слава шести Госвами: <span class="nobr">Шри Рупе</span>, Санатане, <span class="nobr">Рагхунатха Бхатте</span>, Дживе, <span class="nobr">Гопала Бхатте</span> и <span class="nobr">Рагхунатха дасу</span>.
+  </p>
+  <blockquote lang="en">
+  Jaya sri rupa, sri sanatana, bhatta-raghunatha, sri jiva, gopala bhatta, dasa raghunatha sad-gosvami prabhu<br>
+  <small>— kī&nbsp;jaya!</small>
+  </blockquote>
+  <p lang="en">
+  All glories to the six Gosvamis, namely, Sri Rupa, Sanatana, Raghunatha Bhatta, Jiva, Gopala Bhatta and Raghunatha Dasa!
   </p>
   </section>
 
@@ -594,12 +693,19 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <a href="#prema-dhavani-7" class="numerator">
   <img loading="lazy" src="./img/haridasa.jpg">
   </a>
-  <blockquote>
+  <blockquote lang="ru">
   На̄ма̄ча̄рйа Ш́рӣла Харида̄са&nbsp;Т̣ха̄кура<br>
   <small>— кӣ&nbsp;джайа!</small>
   </blockquote>
-  <p>
+  <p lang="ru">
   Вся слава нама-ачарье, Шриле Харидасу Тхакуру!
+  </p>
+  <blockquote lang="en">
+  Nāmācārya Śrīla Haridāsa Ṭhākura<br>
+  <small>— kī&nbsp;jaya!</small>
+  </blockquote>
+  <p lang="en">
+  All glories to the Nāmācārya Śrīla Haridāsa Ṭhākura!
   </p>
   </section>
 
@@ -607,14 +713,21 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <a href="#prema-dhavani-8" class="numerator">
   <img loading="lazy" src="./img/tattva-2.jpg">
   </a>
-  <blockquote>
+  <blockquote lang="ru">
   Премсе кахо Ш́рӣ-Кр̣иш̣н̣а-Чаитанйа,
   Прабху Нитйа̄нанда, Ш́рӣ Адваита, Гада̄дхара,
   Ш́рӣва̄са̄ди <span class="nobr">Гаура-бхакта-вр̣инда</span><br>
   <small>— кӣ&nbsp;джайа!</small>
   </blockquote>
-  <p>
+  <p lang="ru">
   Взывайте с любовью к именам <span class="nobr">Шри Кришны Чайтаньи</span>, <span class="nobr">Прабху Нитьянанды</span>, <span class="nobr">Шри Адвайты</span>, <span class="nobr">Шри Гададхары</span>, Шривасы и ко всем преданным Господа Чайтаньи!
+  </p>
+  <blockquote lang="en">
+  prem-se kaho śrī-kṛṣṇa-caitanya prabhu nityānanda śrī advaita, gadādhara, śrīvāsādi gaura-bhakta-vṛnda<br>
+  <small>— kī&nbsp;jaya!</small>
+  </blockquote>
+  <p lang="en">
+  Call out with love the names Śrī Kṛṣṇa Caitanya, Prabhu Nityānanda, Śrī Advaita, Śrī Gadādhara, Śrīvāsa and all the devotees of Lord Caitanya!
   </p>
   </section>
 
@@ -622,13 +735,20 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <a href="#prema-dhavani-9" class="numerator">
   <img loading="lazy" src="./img/radha-krishna.jpg">
   </a>
-  <blockquote>
+  <blockquote lang="ru">
   Ш́рӣ Ш́рӣ Ра̄дха̄-Кр̣ш̣н̣а, Гопа-Гопӣна̄тха,
   <span class="nobr">Ш́йа̄ма-Кун̣д̣а</span>, <span class="nobr">Ра̄дха̄-Кун̣д̣а</span>, Гирирадж-Говардхана<br>
   <small>— кӣ&nbsp;джайа!</small>
   </blockquote>
-  <p>
+  <p lang="ru">
   Вся слава <span class="nobr">Радха-Кришне</span>, пастушкáм и&nbsp;пастýшкам, коровам, Шьямакунде, <span class="nobr">Радха-Кунде</span> и <span class="nobr">холму Говардхану</span>.
+  </p>
+  <blockquote lang="en">
+  śrī śrī rādha-kṛṣṇa, gopa-gopīnatha, śyāma-kuṇḍa, rādhā-kuṇḍa giri-govardhana<br>
+  <small>— kī&nbsp;jaya!</small>
+  </blockquote>
+  <p lang="en">
+  All glories to Rādhā and Kṛṣṇa, the Lord of the gopas and gopis. All Glories to Śyāma-kuṇḍa, Rādhā-kuṇḍa and Govardhana Hill.
   </p>
   </section>
 
@@ -636,7 +756,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <a href="#prema-dhavani-10" class="numerator">
   <img src="img/dhama-2.jpg" loading="lazy"/>
   </a>
-  <blockquote>
+  <blockquote lang="ru">
   <span class="line">Ш́рӣ Майапур дха̄ма <small>— кӣ&nbsp;джайа!</small></span>
   <!-- <span class="line">Навадвӣпа дха̄ма <small>— кӣ&nbsp;джайа!</small></span> -->
   <span class="line">Ш́рӣ Вр́инда̄вана дха̄ма <small>— кӣ&nbsp;джайа!</small></span>
@@ -649,34 +769,65 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <span class="line">Ш́рӣ Харина̄ма Санкӣртана <small>— кӣ&nbsp;джайа!</small></span>
   <span class="line">Грантха-раджа <span class="nobr">Ш́рӣмад-Бхагаватам</span> махапурана <small>— кӣ&nbsp;джайа!</small></span>
   </blockquote>
-  <p>
+  <p lang="ru">
+  Вся слава <span class="nobr">Шри Майяпур-дхаме</span>. Вся слава <span class="nobr">Шри Вриндавана-дхаме</span>. Вся слава <span class="nobr">Шри Джаганнатх Пури-дхаме</span>. Вся слава <span class="nobr">Ганга-деви</span>. Вся слава <span class="nobr">Ямуна-деви</span>. Вся слава <span class="nobr">Бхакти-деви</span>. Вся слава <span class="nobr">Туласи-деви</span>. Вся слава бесчисленным вайшнавам. Вся слава совместному воспеванию святого имени. Вся слава царю книг, <span class="nobr">«Шримад-Бхагаватам»</span>.
+  </p>
+  <blockquote lang="en">
+  <span class="line">śrī māyāpur dhāma <small>— kī&nbsp;jaya!</small></span>
+  <!-- <span class="line">Navadvipa-Mayapur дха̄ма <small>— kī&nbsp;jaya!</small></span> -->
+  <span class="line">śrī vṛndāvana dhāma <small>— kī&nbsp;jaya!</small></span>
+  <!-- <span class="line">Mathura-dhama <small>— kī&nbsp;jaya!</small></span> -->
+  <span class="line">jagannatha-puri-dhama <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">gaṅgā-mayī <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">yamunā-mayī <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">bhakti-devī tulasī-maharani <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Ananta-koti-vaishnava-vrinda <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">śrī hari-nāma saṅkīrtana <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Грантха-раджа <span class="nobr">Ш́рӣмад-Бхагаватам</span> махапурана <small>— kī&nbsp;jaya!</small></span>
+  </blockquote>
+  <p lang="en">
   Вся слава <span class="nobr">Шри Майяпур-дхаме</span>. Вся слава <span class="nobr">Шри Вриндавана-дхаме</span>. Вся слава <span class="nobr">Шри Джаганнатх Пури-дхаме</span>. Вся слава <span class="nobr">Ганга-деви</span>. Вся слава <span class="nobr">Ямуна-деви</span>. Вся слава <span class="nobr">Бхакти-деви</span>. Вся слава <span class="nobr">Туласи-деви</span>. Вся слава бесчисленным вайшнавам. Вся слава совместному воспеванию святого имени. Вся слава царю книг, <span class="nobr">«Шримад-Бхагаватам»</span>.
   </p>
   </section>
 
   <section id="prema-dhavani-11">
   <a href="#prema-dhavani-11" class="numerator"></a>
-  <blockquote>
+  <blockquote lang="ru">
   <span class="line">ИСККОН-вартмана-гуру-вринда <small>— кӣ&nbsp;джайа!</small></span>
   <span class="line">Самавета бхакта-вринда <small>— кӣ&nbsp;джайа!</small></span>
   <span class="line">Нитай-Гаура премананда хари-харибол!</span>
   </blockquote>
-  <p>
+  <p lang="ru">
+  Вся слава гуру ИСККОН. Вся слава собравшимся преданным. Воспевайте имена Хари! Хари! в экстазе чайтанья-премы.
+  </p>
+  <blockquote lang="en">
+  <span class="line">Sankirtana-yajna <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">brhad-mrdanga <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">ИСККОН-вартмана-гуру-вринда <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">samāveta bhakta-vṛnda <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Nitai-gaura-premānande hari-haribol!</span>
+  </blockquote>
+  <p lang="en">
   Вся слава гуру ИСККОН. Вся слава собравшимся преданным. Воспевайте имена Хари! Хари! в экстазе чайтанья-премы.
   </p>
   </section>
 
   <section id="prema-dhavani-12">
   <a href="#prema-dhavani-12" class="numerator"><img loading="lazy" src="./img/congregation.jpg"/></a>
-  <blockquote>
+  <blockquote lang="ru">
   <span class="line">Вся слава собравшимся преданным</span>
   <span class="line">— Харе Кр̣иш̣н̣а <small>(3 раза)</small></span>
   <span class="line">Вся слава вся слава вся слава Ш́ри Ш́ри Гуру и Ш́ри&nbsp;Гауранге</span>
   <span class="line">«Джайа Ш́рӣ Ш́рӣ-Гуру-Гауранга»</span>
   <span class="line">Вся слава Ш́рӣле Прабхупа̄де!</span>
   </blockquote>
-  <p>
-  </p>
+  <blockquote lang="en">
+  <span class="line">All glories to the assembled devotees</span>
+  <span class="line">— Харе Кр̣иш̣н̣а <small>(3 раза)</small></span>
+  <span class="line">All glories to Sri Guru and Gauranga</span>
+  <span class="line">«Джайа Ш́рӣ Ш́рӣ-Гуру-Гауранга»</span>
+  <span class="line">Вся слава Ш́рӣле Прабхупа̄де!</span>
+  </blockquote>
   </section>
 </article>
 
@@ -694,7 +845,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <span class="line">Хиран̣йакаш́ипор вакш̣ах̣-</span>
   <span class="line">Ш́ила̄-т̣ан̇ка-накха̄лайе</span>
   </blockquote>
-  <p>
+  <p lang="ru">
   Я склоняюсь перед Господом Нарасимхой, который приносит радость Прахладе Махарадже и чьи ногти вонзаются, словно резцы, в каменную грудь демона Хираньякашипу.
   </p>
   </section>
@@ -706,7 +857,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <span class="line">Бахир Нр̣исим̇хо хр̣идайе&nbsp;Нр̣исим̇хо</span>
   <span class="line">Нр̣исим̇хам а̄дим̇ ш́аран̣ам̇&nbsp;прападйе</span>
   </blockquote>
-  <p>
+  <p lang="ru">
   Господь Нрисимха и здесь и там. Куда бы я ни пошел — везде Господь Нрисимха. Он и в сердце, и вовне. Я предаюсь Господу Нрисимхе, источнику всего сущего и высшему прибежищу для всех.
   </p>
   </section>
@@ -720,13 +871,13 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
   <span class="line">Джайа джагадӣш́а Харе</span>
   <span class="line">Джайа джагадӣш́а Харе</span>
   </blockquote>
-  <p>
+  <p lang="ru">
   О Кешава! О Владыка вселенной! О Господь Хари, принявший образ человекольва! Слава Тебе! С такой же легкостью, с какой человек может раздавить пальцами осу, Ты Своими чудесными острыми когтями разорвал на части тело демона Хираньякашипу, схожего с осой.
   </p>
   </section>
 
   <section id="nrsimha-x">
-  <blockquote>
+  <blockquote lang="ru">
   <span class="line">Джайа Нр̣сим̇хадев джайа Нр̣сим̇хадев<br/> джайа Нр̣сим̇хадев джайа Нр̣сим̇хадев</span>
   <span class="line">Джайа Нара-Хари джайа Нара-Хари<br/> джайа Нара-Хари джайа Нара-Хари</span>
   <!-- <span class="line">Джайа Лакшмӣ Нр̣сим̇ха джайа Нара Хари<br/> джайа Лакшмӣ Нр̣сим̇ха джайа Нара Хари</span> -->
@@ -753,7 +904,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Вр̣инда̄йаи Туласӣ-Девйаи прийа̄йаи&nbsp;Кеш́авасйа&nbsp;ча</span>
 <span class="line">Кр̣иш̣н̣а-бхакти-праде девӣ Сатйаватйаи намо&nbsp;намах̣</span>
 </blockquote>
-<p>
+<p lang="ru">
 Вновь и вновь склоняюсь я перед Вриндой, Шримати Туласи Деви, которая очень дорога Господу Кешаве. О богиня, ты, знающая высочайшую истину, даруешь всем преданное служение Господу Кришне.
 </p>
 </section>
@@ -765,7 +916,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Намо намах̣ Туласӣ <span class="nobr">Кр̣иш̣н̣а-прейасӣ</span></span>
 <span class="line">Ра̄дха̄-Кр̣иш̣н̣а-сева̄ па̄бо эи&nbsp;абхила̄ш̣ӣ</span>
 </blockquote>
-<p>
+<p lang="ru">
 О Туласи, возлюбленная Кришны, я вновь и вновь склоняюсь пред тобой. Я желаю обрести служение Шри Шри Радхе и Кришне.
 </p>
 </section>
@@ -776,7 +927,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Дже тома̄ра ш́аран̣а лой, <span class="nobr">та̄ра ва̄н̃чха̄ пӯрн̣а хой</span></span>
 <span class="line">Кр̣ипа̄ кори’ коро та̄ре <span class="nobr">Вр̣инда̄вана-ва̄сӣ</span></span>
 </blockquote>
-<p>
+<p lang="ru">
 Ты исполняешь все желания того, кто избрал тебя своим прибежищем. Проливая на него свою милость, ты делаешь его жителем Вриндаваны.
 </p>
 </section>
@@ -787,7 +938,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Мор эи абхила̄ш̣, <span class="nobr">вила̄с кун̃дже дио ва̄с</span></span>
 <span class="line">Найане херибо сада̄ <span class="nobr">йугала-рӯпа-ра̄ш́и</span></span>
 </blockquote>
-<p>
+<p lang="ru">
 Позволь же и мне поселиться в рощах наслаждения Вриндавана-дхамы, и тогда я смогу постоянно созерцать прекрасные игры Радхи и Кришны.
 </p>
 </section>
@@ -798,7 +949,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Эи ниведана дхара, <span class="nobr">сакхӣр анугата коро</span></span>
 <span class="line">Сева̄-адхика̄ра дийе <span class="nobr">коро нӣджа да̄сӣ</span></span>
 </blockquote>
-<p>
+<p lang="ru">
 Молю тебя: сделай меня последователем пастушек Враджа. Даруй мне привилегию преданно служить Господу и сделай меня своей служанкой.
 </p>
 </section>
@@ -809,7 +960,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Дӣна Кр̣ш̣н̣а-да̄се кой, <span class="nobr">эи джена мора хой</span></span>
 <span class="line">Ш́рӣ-Ра̄дха̄-Говинда-преме <span class="nobr">сада̄ джена бха̄си</span></span>
 </blockquote>
-<p>
+<p lang="ru">
 Я, падший, недостойный слуга Кришны молю даровать мне возможность вечно плавать в океане любви Шри Радхи и Говинды.
 </p>
 </section>
@@ -820,14 +971,14 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Йа̄ни ка̄ни ча па̄па̄ни <span class="nobr">брахма-хатйа̄дика̄ни ча</span></span>
 <span class="line">Та̄ни та̄ни пран̣аш́йанти <span class="nobr">прадакш̣ин̣ах̣ паде паде</span></span>
 </blockquote>
-<p>
+<p lang="ru">
 Обходя вокруг Туласи-деви, человек с каждым шагом избавляется от всех грехов, какие только можно совершить, — даже от такого греха, как убийство брахмана.
 </p>
 </section>
 
 <section id="tulasi-x">
 <a href="#tulasi-x" class="numerator">***</a>
-<blockquote>
+<blockquote lang="ru">
 <span class="line">Вр̣инда̄ Девӣ Ш́рӣ Туласӣ Махарани <small>− кй джайа!</small></span>
 </blockquote>
 </section>
@@ -845,7 +996,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Āна̄нда̄мбудхи-вардханам̇ <span class="nobr">прати-падам̇ пӯрн̣а̄мр̣ита̄-сва̄данам̇</span></span>
 <span class="line">Сарва̄-атма-снапанам̇ парам̇&nbsp;виджайате <span class="nobr">Ш́рӣ-Кр̣иш̣н̣а-сан̇кӣртанам</span></span>
 </blockquote>
-<p>
+<p lang="ru">
 Слава Шри-Кришна-санкиртане, очищающей сердце от грязи, скопившейся в нем за долгие годы, и гасящей пожар обусловленного существования и повторяющихся рождений и смертей. Это движение санкиртаны несет величайшее благословение человечеству, ибо излучает сияние, подобное благодатному сиянию луны. Оно душа всего трансцендентного знания. Оно углубляет океан трансцендентного блаженства и дает нам возможность насладиться нектаром, которого мы всегда жаждем.
 </p>
 </section>
@@ -858,7 +1009,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Эта̄др̣иш́ӣ тава кр̣ипа̄ Бхагаван&nbsp;мама̄пи</span>
 <span class="line">Дурдаивам ӣдр̣иш́ам <span class="nobr">иха̄джани на̄нура̄гах̣</span></span>
 </blockquote>
-<p>
+<p lang="ru">
 О Мой Господь, только Твое Святое Имя способно даровать высшее благо всем живым существам, и потому у Тебя сотни и миллионы имен, таких как Кришна и Говинда, в которые Ты распространил Себя. В эти трансцендентные имена Ты вложил все Свои трансцендентные энергии, и не существует строгих правил повторения этих имен. Мой дорогой Господь, по доброте Своей Ты даровал падшим обусловленным душам возможность достичь тебя, повторяя Твои святые имена, однако я настолько неудачлив, что допускаю оскорбления при повторении, и поэтому не чувствую к ним никакого влечения.
 </p>
 </section>
@@ -871,7 +1022,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Ама̄нина̄ ма̄на-дена</span>
 <span class="line">Кӣртанӣйах̣ сада̄ Харих̣</span>
 </blockquote>
-<p>
+<p lang="ru">
 Тому, кто считает себя ниже травы, кто терпеливее дерева, не ожидает почтения к себе и всегда готов оказать почтение другим,
 тому нетрудно повторять святое имя Господа постоянно.<br>
 <!-- ...Такой человек возвышен, но считает себя ниже подножной травы, проявляя терпение двух видов. Когда дерево рубят, оно не протестует. Когда оно высыхает без воды, оно не просит пить. Дерево отдает цветы, плоды и все что имеет всем и каждому. Оно терпит палящий зной и проливной дождь, но дает укрытие другим. Хотя Вайшнав - самый возвышенный из всех людей, он свободен от гордости и почитает каждого, зная, что каждый является местом пребывания Кришны. -->
@@ -886,7 +1037,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Мама джанмани <span class="nobr">джанман-Ӣш́варе</span></span>
 <span class="line">Бхавата̄д бхактир <span class="nobr">ахаитукӣ твайи</span></span>
 </blockquote>
-<p>
+<p lang="ru">
 О всемогущий Господь, я не хочу копить богатств, мне не нужны ни последователи, ни прекрасная жена, ни плоды деятельности. Я хочу только одного — жизнь за жизнью преданно служить Тебе, не ожидая ничего взамен.
 </p>
 </section>
@@ -899,7 +1050,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Кр̣ипайа̄ тава <span class="nobr">па̄да-пан̇каджа-</span></span>
 <span class="line">Стхита-дхӯлӣ-садр̣иш́ам вичинтайа</span>
 </blockquote>
-<p>
+<p lang="ru">
 О сын Махараджи Нанды, Кришна, я Твой вечный слуга, но в результате своих поступков я пал в этот океан невежества. Прошу тебя, вызволи меня из этого океана рождения и смерти и сделай одной из пылинок у Твоих лотосных стоп.
 </p>
 </section>
@@ -912,7 +1063,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Пулакаир ничитам̇ вапух̣ када̄</span>
 <span class="line">Тава на̄ма-грахан̣е бхавиш̣йати</span>
 </blockquote>
-<p>
+<p lang="ru">
 О мой Господь, когда же глаза мои украсятся слезами любви, беспрестанно льющимися при воспевании Твоего святого имени? Когда же дрогнет мой голос и волосы на теле встанут дыбом при повторении Твоего имени?
 <!-- <br>...Без любви к Тебе моя жизнь не имеет смысла. -->
 </p>
@@ -926,7 +1077,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Ш́ӯнйа̄итам̇ джагат сарвам̇</span>
 <span class="line">Говинда вирахен̣а ме</span>
 </blockquote>
-<p>
+<p lang="ru">
 О Говинда! Каждое мгновение в разлуке с Тобой кажется мне целой вечностью. Слезы ручьем льются из моих глаз, и без Тебя весь мир кажется мне пустым.
 <!-- ...Я чувствую, будто сгораю заживо на медленном огне. -->
 </p>
@@ -951,7 +1102,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <blockquote class="lower">
 Прабхура «Ш́икш̣а̄ш̣т̣ака» − ш́лока йеи пад̣е, ш́уне Кр̣иш̣н̣е према-бхакти та̄ра ба̄д̣е дине-дине
 </blockquote>
-<p>
+<p lang="ru">
 Любовь и преданность к Кришне будет расти с каждым днем в любом, кто цитирует или слушает наставления Шри Чайтанйи Махапрабху, содержащиеся в этих восьми стихах.
 </p>
 </section>
@@ -961,14 +1112,23 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <article id="mahamantra-2">
 <h2>Харе Кришна Маха-Мантра</h2>
 
-<blockquote>
+<blockquote lang="ru">
 <span class="line">Харе Кр̣иш̣н̣а Харе Кр̣иш̣н̣а</span>
 <span class="line">Кр̣иш̣н̣а Кр̣иш̣н̣а Харе Харе</span>
 <span class="line">Харе Ра̄ма Харе Ра̄ма</span>
 <span class="line">Ра̄ма Ра̄ма Харе Харе</span>
 </blockquote>
-<p>
+<blockquote lang="en">
+<span class="line">Hare Kṛṣṇa Hare Kṛṣṇa</span>
+<span class="line">Kṛṣṇa Kṛṣṇa Hare Hare</span>
+<span class="line">Hare Rāma Hare Rāma</span>
+<span class="line">Rāma Rāma Hare Hare</span>
+</blockquote>
+<p lang="ru">
 О  всепривлекающий, о  всерадующий Господь, о, энергия Господа, прошу, позволь мне преданно служить Тебе!
+</p>
+<p lang="en">
+Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional service.
 </p>
 <!-- <br/> -->
 <a href="#mahamantra-2" class="numerator"><img loading="lazy" src="./img/pooja-1.jpeg" width="400"/></a>
@@ -978,28 +1138,28 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <article id="offences">
 <h2>Десять оскорблений святого имени</h2>
 
-<p><a id="offence-1" href="#offence-1" class="numerator-inline">1.</a> Оскорблять и критиковать преданных посвятивших свою жизнь распространению славы Святого имени Господа.</p>
+<p lang="ru"><a id="offence-1" href="#offence-1" class="numerator-inline">1.</a> Оскорблять и критиковать преданных посвятивших свою жизнь распространению славы Святого имени Господа.</p>
 
-<p><a id="offence-2" href="#offence-2" class="numerator-inline">2.</a> Считать имена таких полубогов как Господь Брахма и Господь Шива равными или независимыми от имени Верховной Личности Бога.</p>
+<p lang="ru"><a id="offence-2" href="#offence-2" class="numerator-inline">2.</a> Считать имена таких полубогов как Господь Брахма и Господь Шива равными или независимыми от имени Верховной Личности Бога.</p>
 
-<p><a id="offence-3" href="#offence-3" class="numerator-inline">3.</a> Пренебрегать наставлениями духовного учителя и считать его обычным человеком.</p>
+<p lang="ru"><a id="offence-3" href="#offence-3" class="numerator-inline">3.</a> Пренебрегать наставлениями духовного учителя и считать его обычным человеком.</p>
 
-<p><a id="offence-4" href="#offence-4" class="numerator-inline">4.</a> Оскорблять ведическую литературу и литературу сведущую ведической традиции.</p>
+<p lang="ru"><a id="offence-4" href="#offence-4" class="numerator-inline">4.</a> Оскорблять ведическую литературу и литературу сведущую ведической традиции.</p>
 
-<p><a id="offence-5" href="#offence-5" class="numerator-inline">5.</a> Считать славу воспевания Святого имени плодом воображения.</p>
+<p lang="ru"><a id="offence-5" href="#offence-5" class="numerator-inline">5.</a> Считать славу воспевания Святого имени плодом воображения.</p>
 
-<p><a id="offence-6" href="#offence-6" class="numerator-inline">6.</a> Давать собственное толкование Святого имени Господа.</p>
+<p lang="ru"><a id="offence-6" href="#offence-6" class="numerator-inline">6.</a> Давать собственное толкование Святого имени Господа.</p>
 
-<p><a id="offence-7" href="#offence-7" class="numerator-inline">7.</a> Совершать греховные поступки в расчете на очищающую силу Святого имени Господа.</p>
+<p lang="ru"><a id="offence-7" href="#offence-7" class="numerator-inline">7.</a> Совершать греховные поступки в расчете на очищающую силу Святого имени Господа.</p>
 
-<p><a id="offence-8" href="#offence-8" class="numerator-inline">8.</a> Считать повторение Харе Кришна маха мантры ритуальной благочестивой деятельностью для получения результата (карма-канда).</p>
-<!-- <p><a id="offence-8" href="#offence-8" class="numerator-inline">8.</a> Считать повторение Харе Кришна маха мантры одной из форм благочестивой деятельности, рекомендованной в Ведах в разделе карма-канда. Повторять Харе Кришна маха мантру механически или в корыстных целях.</p> -->
+<p lang="ru"><a id="offence-8" href="#offence-8" class="numerator-inline">8.</a> Считать повторение Харе Кришна маха мантры ритуальной благочестивой деятельностью для получения результата (карма-канда).</p>
+<!-- <p lang="ru"><a id="offence-8" href="#offence-8" class="numerator-inline">8.</a> Считать повторение Харе Кришна маха мантры одной из форм благочестивой деятельности, рекомендованной в Ведах в разделе карма-канда. Повторять Харе Кришна маха мантру механически или в корыстных целях.</p> -->
 
-<p><a id="offence-9" href="#offence-9" class="numerator-inline">9.</a> Проповедовать неверующим о славе Святого имени Господа.</p>
+<p lang="ru"><a id="offence-9" href="#offence-9" class="numerator-inline">9.</a> Проповедовать неверующим о славе Святого имени Господа.</p>
 
-<p><a id="offence-10" href="#offence-10" class="numerator-inline">10.</a> Не иметь полной веры в повторение святых имен и продолжать держаться за свои материальные привязанности, даже получив столько наставлений на эту тему.</p>
+<p lang="ru"><a id="offence-10" href="#offence-10" class="numerator-inline">10.</a> Не иметь полной веры в повторение святых имен и продолжать держаться за свои материальные привязанности, даже получив столько наставлений на эту тему.</p>
 
-<p><a id="offence-11" href="#offence-11" class="numerator-inline"></a> Невнимательное повторение при воспевании Святого имени Господа является корнем 10 оскорблений и каждому, кто желает достичь истинной любви к Богу нужно тщательно избегать этих оскорблений.</p>
+<p lang="ru"><a id="offence-11" href="#offence-11" class="numerator-inline"></a> Невнимательное повторение при воспевании Святого имени Господа является корнем 10 оскорблений и каждому, кто желает достичь истинной любви к Богу нужно тщательно избегать этих оскорблений.</p>
 
 </article>
 
@@ -1015,7 +1175,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Тад доша-прасаманасйа</span>
 <span class="line">Ш́рӣ-Кр̣иш̣н̣а-смаранам кароми</span>
 </blockquote>
-<p>
+<p lang="ru">
 Пусть милость Кришны и Его преданных сведет на нет все ошибки в нашем соблюдении правил поклонения и в наших действиях по поклонению. Теперь я вспоминаю Кришну, чтобы аннулировать все ошибки, которые я мог совершить.
 </p>
 
@@ -1025,7 +1185,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Йат пуджитам майа дева</span>
 <span class="line">Парипурнам тад асту ме</span>
 </blockquote>
-<p>
+<p lang="ru">
 О мой Господь, о Джанардана, какая бы маленькая пуджа или поклонение не были совершены мною, хотя это и без преданности, без правильных мантр, и без правильного поклонения, пожалуйста, пусть это будет завершено.
 </p>
 
@@ -1035,7 +1195,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Дасо хам ити мам матва</span>
 <span class="line">Кшасмасва мадхусудана</span>
 </blockquote>
-<p>
+<p lang="ru">
 Тысячи оскорблений совершаются мною днем и ночью. Но думая обо мне как о Твоем слуге, о Мадхусудана, милостиво прости их.
 </p>
 
@@ -1045,7 +1205,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Ити самсмритйа самсритйа</span>
 <span class="line">Пранан сандхарайамй ахам</span>
 </blockquote>
-<p>
+<p lang="ru">
 О Говинда! Ты обещал, что Твой преданный никогда не погибнет. Помня это снова и снова, я способен сохранять свой жизненный воздух.
 </p>
 
@@ -1064,7 +1224,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 <span class="line">Патита̄на̄м̇ па̄ванебхйо</span>
 <span class="line">Ваиш̣н̣авебхйо намо намах̣</span>
 </blockquote>
-<p>
+<p lang="ru">
 Я в глубоком почтении склоняюсь перед всеми вайшнавами, преданными Господа. Они исполнены сострадания к обусловленным падшим душам и подобны древу желаний, которое может исполнить любое желание.
 </p>
 </article>
