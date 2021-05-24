@@ -205,6 +205,7 @@
 <script>
   // read lang from hash
   const params = new URLSearchParams(location.search)
+  if (!params.get('lang')) location.search = 'lang=en'
   document.documentElement.setAttribute('lang', params.get('lang'))
 </script>
 
@@ -681,7 +682,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
   Вся слава шести Госвами: <span class="nobr">Шри Рупе</span>, Санатане, <span class="nobr">Рагхунатха Бхатте</span>, Дживе, <span class="nobr">Гопала Бхатте</span> и <span class="nobr">Рагхунатха дасу</span>.
   </p>
   <blockquote lang="en">
-  Jaya sri rupa, sri sanatana, bhatta-raghunatha, sri jiva, gopala bhatta, dasa raghunatha sad-gosvami prabhu<br>
+  Jaya Sri Rupa, Sri Sanatana, Bhatta-Raghunatha, Sri Jiva, Gopala Bhatta, Dasa Raghunatha sad-gosvami prabhu<br>
   <small>— kī&nbsp;jaya!</small>
   </blockquote>
   <p lang="en">
@@ -723,7 +724,8 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
   Взывайте с любовью к именам <span class="nobr">Шри Кришны Чайтаньи</span>, <span class="nobr">Прабху Нитьянанды</span>, <span class="nobr">Шри Адвайты</span>, <span class="nobr">Шри Гададхары</span>, Шривасы и ко всем преданным Господа Чайтаньи!
   </p>
   <blockquote lang="en">
-  prem-se kaho śrī-kṛṣṇa-caitanya prabhu nityānanda śrī advaita, gadādhara, śrīvāsādi gaura-bhakta-vṛnda<br>
+  Prem-se kaho Śrī-Kṛṣṇa-Caitanya
+  prabhu Nityānanda Śrī Advaita, Gadādhara, Śrīvāsādi gaura-bhakta-vṛnda<br>
   <small>— kī&nbsp;jaya!</small>
   </blockquote>
   <p lang="en">
@@ -744,7 +746,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
   Вся слава <span class="nobr">Радха-Кришне</span>, пастушкáм и&nbsp;пастýшкам, коровам, Шьямакунде, <span class="nobr">Радха-Кунде</span> и <span class="nobr">холму Говардхану</span>.
   </p>
   <blockquote lang="en">
-  śrī śrī rādha-kṛṣṇa, gopa-gopīnatha, śyāma-kuṇḍa, rādhā-kuṇḍa giri-govardhana<br>
+  Śrī Śrī Rādha-Kṛṣṇa, Gopa-Gopīnatha, Śyāma-Kuṇḍa, Rādhā-Kuṇḍa Giriraj-Govardhana<br>
   <small>— kī&nbsp;jaya!</small>
   </blockquote>
   <p lang="en">
@@ -773,20 +775,20 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
   Вся слава <span class="nobr">Шри Майяпур-дхаме</span>. Вся слава <span class="nobr">Шри Вриндавана-дхаме</span>. Вся слава <span class="nobr">Шри Джаганнатх Пури-дхаме</span>. Вся слава <span class="nobr">Ганга-деви</span>. Вся слава <span class="nobr">Ямуна-деви</span>. Вся слава <span class="nobr">Бхакти-деви</span>. Вся слава <span class="nobr">Туласи-деви</span>. Вся слава бесчисленным вайшнавам. Вся слава совместному воспеванию святого имени. Вся слава царю книг, <span class="nobr">«Шримад-Бхагаватам»</span>.
   </p>
   <blockquote lang="en">
-  <span class="line">śrī māyāpur dhāma <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Śrī Māyāpur dhāma <small>— kī&nbsp;jaya!</small></span>
   <!-- <span class="line">Navadvipa-Mayapur дха̄ма <small>— kī&nbsp;jaya!</small></span> -->
-  <span class="line">śrī vṛndāvana dhāma <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Śrī Vṛndāvana dhāma <small>— kī&nbsp;jaya!</small></span>
   <!-- <span class="line">Mathura-dhama <small>— kī&nbsp;jaya!</small></span> -->
-  <span class="line">jagannatha-puri-dhama <small>— kī&nbsp;jaya!</small></span>
-  <span class="line">gaṅgā-mayī <small>— kī&nbsp;jaya!</small></span>
-  <span class="line">yamunā-mayī <small>— kī&nbsp;jaya!</small></span>
-  <span class="line">bhakti-devī tulasī-maharani <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Jagannatha-Puri-dhama <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Gaṅgā-mayī <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Yamunā-mayī <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Bhakti-devī Tulasī-Maharani <small>— kī&nbsp;jaya!</small></span>
   <span class="line">Ananta-koti-vaishnava-vrinda <small>— kī&nbsp;jaya!</small></span>
-  <span class="line">śrī hari-nāma saṅkīrtana <small>— kī&nbsp;jaya!</small></span>
-  <span class="line">Грантха-раджа <span class="nobr">Ш́рӣмад-Бхагаватам</span> махапурана <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Śrī Hari-nāma saṅkīrtana <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Grantha raja <span class="nobr">Śrīmad-Bhagavatam</span> mahapurana <small>— kī&nbsp;jaya!</small></span>
   </blockquote>
   <p lang="en">
-  Вся слава <span class="nobr">Шри Майяпур-дхаме</span>. Вся слава <span class="nobr">Шри Вриндавана-дхаме</span>. Вся слава <span class="nobr">Шри Джаганнатх Пури-дхаме</span>. Вся слава <span class="nobr">Ганга-деви</span>. Вся слава <span class="nobr">Ямуна-деви</span>. Вся слава <span class="nobr">Бхакти-деви</span>. Вся слава <span class="nobr">Туласи-деви</span>. Вся слава бесчисленным вайшнавам. Вся слава совместному воспеванию святого имени. Вся слава царю книг, <span class="nobr">«Шримад-Бхагаватам»</span>.
+  All glories to Sri Mayapur-dhama. All glories to Sri Vrindavana-dhama. All glories to Sri Jagannath Puri dhama. All glories to Ganga-devi, Yamuna-devi, Bhakti devi. All glories to all the Vaisnavas. All glories to congregational worshiping Holy Names. All glories to the king of all the books, Srimad Bhagavatam.
   </p>
   </section>
 
@@ -802,13 +804,13 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
   </p>
   <blockquote lang="en">
   <span class="line">Sankirtana-yajna <small>— kī&nbsp;jaya!</small></span>
-  <span class="line">brhad-mrdanga <small>— kī&nbsp;jaya!</small></span>
-  <span class="line">ИСККОН-вартмана-гуру-вринда <small>— kī&nbsp;jaya!</small></span>
-  <span class="line">samāveta bhakta-vṛnda <small>— kī&nbsp;jaya!</small></span>
-  <span class="line">Nitai-gaura-premānande hari-haribol!</span>
+  <span class="line">Brhad-mrdanga <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">ISCKON-vartmana-guru-vrinda <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Samāveta bhakta-vṛnda <small>— kī&nbsp;jaya!</small></span>
+  <span class="line">Nitai-Gaura-premānande hari-haribol!</span>
   </blockquote>
   <p lang="en">
-  Вся слава гуру ИСККОН. Вся слава собравшимся преданным. Воспевайте имена Хари! Хари! в экстазе чайтанья-премы.
+  All glories to Guru ISKCON. All glories to the assembled devotees. Worhip names of Hari! Hari! in pure extasy of Chaitanya-prema.
   </p>
   </section>
 
@@ -823,47 +825,66 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
   </blockquote>
   <blockquote lang="en">
   <span class="line">All glories to the assembled devotees</span>
-  <span class="line">— Харе Кр̣иш̣н̣а <small>(3 раза)</small></span>
-  <span class="line">All glories to Sri Guru and Gauranga</span>
-  <span class="line">«Джайа Ш́рӣ Ш́рӣ-Гуру-Гауранга»</span>
-  <span class="line">Вся слава Ш́рӣле Прабхупа̄де!</span>
+  <span class="line">— Hare Krishna <small>(3 times)</small></span>
+  <span class="line">All glories to Śrī Guru and Gauranga</span>
+  <span class="line">Jaya Śrī Śrī-Guru-Gauranga</span>
+  <span class="line">All glories to Srila Prabhupada!</span>
   </blockquote>
   </section>
 </article>
 
 
 <article id="nrsimha" rel="http://kksongs.org/songs/n/namastenarasimha.html">
-  <h2>Шри Нрсимха Пранама</h2>
+  <h2 lang="ru">Шри Нрсимха Пранама</h2>
+  <h2 lang="en">Śrī Nrisimha Pranam</h2>
 
   <section id="nrsimha-1">
   <a href="#nrsimha-1" class="numerator">
   <img loading="lazy"  src="./img/nrsimha-4.jpg"/>
   </a>
-  <blockquote class="lower">
+  <blockquote class="lower" lang="ru">
   <span class="line">Намас те Нарасим̇ха̄йа</span>
   <span class="line">Прахла̄да̄хла̄да-да̄йине</span>
   <span class="line">Хиран̣йакаш́ипор вакш̣ах̣-</span>
   <span class="line">Ш́ила̄-т̣ан̇ка-накха̄лайе</span>
   </blockquote>
+  <blockquote class="lower" lang="en">
+  <span class="line">Namas te narasiḿhāya</span>
+  <span class="line">Prahlādāhlāda-dāyine</span>
+  <span class="line">Hiraṇyakaśipor vakṣaḥ-</span>
+  <span class="line">Śilā-ṭańka-nakhālaye</span>
+  </blockquote>
   <p lang="ru">
   Я склоняюсь перед Господом Нарасимхой, который приносит радость Прахладе Махарадже и чьи ногти вонзаются, словно резцы, в каменную грудь демона Хираньякашипу.
+  </p>
+  <p lang="en">
+  I offer my obeisances to Lord Narasimha, who gives joy to Prahlada Maharaja and whose nails are like chisels on the stone like chest of the demon Hiranyakasipu.
   </p>
   </section>
 
   <section id="nrsimha-2">
-  <blockquote class="lower">
+  <blockquote class="lower" lang="ru">
   <span class="line">Ито Нр̣исим̇хах̣ парато&nbsp;Нр̣исим̇хо</span>
   <span class="line">Йато йато йа̄ми тато&nbsp;Нр̣исим̇хах̣</span>
   <span class="line">Бахир Нр̣исим̇хо хр̣идайе&nbsp;Нр̣исим̇хо</span>
   <span class="line">Нр̣исим̇хам а̄дим̇ ш́аран̣ам̇&nbsp;прападйе</span>
   </blockquote>
+  <blockquote class="lower" lang="en">
+  <span class="line">Ito nṛsiḿhaḥ parato nṛsiḿho</span>
+  <span class="line">Yato yato yāmi tato nṛsiḿhaḥ</span>
+  <span class="line">Bahir nṛsiḿho hṛdaye nṛsiḿho</span>
+  <span class="line">Nṛsiḿham ādiḿ śaraṇaḿ prapadye</span>
+  </blockquote>
   <p lang="ru">
   Господь Нрисимха и здесь и там. Куда бы я ни пошел — везде Господь Нрисимха. Он и в сердце, и вовне. Я предаюсь Господу Нрисимхе, источнику всего сущего и высшему прибежищу для всех.
+  </p>
+  <p lang="en">
+  Lord Nrsimha is here and also there. Wherever I go Lord Nrsimha is there. He is in the heart and is outside as well. I surrender to Lord Nrsimha, the origin of all things and the supreme refuge.
   </p>
   </section>
 
   <section id="nrsimha-3">
-  <blockquote class="lower">
+  <blockquote class="lower" lang="ru">
   <span class="line">Тава кара-камала-варе <span class="nobr">накхам адбхута-ш́р̣ин̇гам̇</span></span>
   <span class="line">Далита-Хиран̣йакаш́ипу <span class="nobr">тану-бхр̣ин̇гам</span></span>
   <span class="line">Кеш́ава дхр̣ита-<span class="nobr">нарахари-рӯпа</span></span>
@@ -871,8 +892,19 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
   <span class="line">Джайа джагадӣш́а Харе</span>
   <span class="line">Джайа джагадӣш́а Харе</span>
   </blockquote>
+  <blockquote class="lower" lang="en">
+  <span class="line">Tava kara-kamala-vare nakham adbhuta-śṛńgaḿ</span>
+  <span class="line">Dalita-hiraṇyakaśipu-tanu-bhṛńgam</span>
+  <span class="line">Keśava dhṛta-narahari-rūpa</span>
+  <span class="line">Jaya jagadīśa hare</span>
+  <span class="line">Jaya jagadīśa hare</span>
+  <span class="line">Jaya jagadīśa hare</span>
+  </blockquote>
   <p lang="ru">
   О Кешава! О Владыка вселенной! О Господь Хари, принявший образ человекольва! Слава Тебе! С такой же легкостью, с какой человек может раздавить пальцами осу, Ты Своими чудесными острыми когтями разорвал на части тело демона Хираньякашипу, схожего с осой.
+  </p>
+  <p lang="en">
+  O Kesava! O Lord of the universe! O Lord Hari, who have assumed the form of half-man, half-lionl All glories to You! Just as one can easily crush a wasp between one's fingernails, so in the same way the body of the wasp like demon Hiranyakasipu has been ripped apart by the wonderful pointed nails on Your beautiful lotus hands.
   </p>
   </section>
 
@@ -894,18 +926,26 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
 
 
 <article id="tulasi">
-<h2>Шри Туласи Киртан</h2>
+<h2 lang="ru">Шри Туласи Киртан</h2>
+<h2 lang="en">Sri Tulasi Kirtana</h2>
 
 <p hidden><small>Примеры: <a href="https://soundcloud.com/iskconbangalore/tulasi-krishna-preyasi">ISKCON Bangalore</a></small></p>
 
 <section id="tulasi-pranama">
 <a href="#tulasi-pranama"><img  loading="lazy" src="./img/tulasi-devi.jpg"></a>
-<blockquote class="lower">
+<blockquote class="lower" lang="ru">
 <span class="line">Вр̣инда̄йаи Туласӣ-Девйаи прийа̄йаи&nbsp;Кеш́авасйа&nbsp;ча</span>
 <span class="line">Кр̣иш̣н̣а-бхакти-праде девӣ Сатйаватйаи намо&nbsp;намах̣</span>
 </blockquote>
+<blockquote class="lower" lang="en">
+<span class="line">Vṛndāyai tulasī-devyai priyāyai keśavasya ca</span>
+<span class="line">viṣṇu-bhakti-prade devī satya vatyai namo namaḥ</span>
+</blockquote>
 <p lang="ru">
 Вновь и вновь склоняюсь я перед Вриндой, Шримати Туласи Деви, которая очень дорога Господу Кешаве. О богиня, ты, знающая высочайшую истину, даруешь всем преданное служение Господу Кришне.
+</p>
+<p lang="en">
+I offer my repeated obeisances unto Vrnda, Srimati Tulasi Devi, who is very dear to Lord Kesava. O goddess, you bestow devotional service to Lord Visnu and possess the highest truth.
 </p>
 </section>
 
