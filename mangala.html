@@ -24,6 +24,23 @@
     /* unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; */
   }
 
+  @media print {
+    article {
+      page-break-before: always;
+    }
+    h1, h2, h3, h4 {
+      page-break-after: avoid;
+    }
+    pre, blockquote {
+      page-break-inside: avoid;
+    }
+    .no-print {
+      visibility: hidden;
+      height: 0;
+      display: none!important;
+    }
+  }
+
   /* flex font size */
   html {font-size: 100%;}
 
@@ -112,7 +129,7 @@
     /* border: .5rem solid white; */
     border: 2vmin solid white;
     max-width: 100%;
-    max-height: 64vh;
+    max-height: 420px;
     object-fit: cover;
   }
 
@@ -449,7 +466,7 @@ By the mercy of the spiritual master one receives the benediction of Krsna. With
 
 <section id="pranama-1">
 <a href="#pranama-1" class="numerator">
-<img loading="lazy" src="./img/prabhupada.png">
+<img loading="lazy" src="./img/prabhupada.png"  class="no-print">
 </a>
 <blockquote hidden lang="in">
 नमः ॐ विष्णु पादय, कृष्ण पृष्ठाय भूतले,
@@ -567,7 +584,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
 
   <section id="prema-dhavani-1">
   <a href="#prema-dhavani-1" class="numerator">
-  <img loading="lazy" src="./img/prabhupada.jpg"/>
+  <img loading="lazy" src="./img/prabhupada.jpg" class="no-print"/>
   </a>
   <blockquote lang="ru">
   Джайа Ом̇ Виш̣н̣у-па̄да парамахам̇са
@@ -591,7 +608,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
 
   <section id="prema-dhavani-2">
   <a href="#prema-dhavani-2" class="numerator">
-  <img loading="lazy" src="./img/bhaktisiddhantha-color.jpg"/>
+  <img loading="lazy" src="./img/bhaktisiddhantha-color.jpg"  class="no-print"/>
   </a>
   <blockquote lang="ru">
   Джайа Ом̇ Виш̣н̣у-па̄да парамахам̇са
@@ -614,7 +631,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
 
   <section id="prema-dhavani-3">
   <a href="#prema-dhavani-3" class="numerator">
-  <img loading="lazy" src="./img/gaurakishor.jpg"/>
+  <img loading="lazy" src="./img/gaurakishor.jpg" class="no-print"/>
   </a>
   <blockquote lang="ru">
   Джайа Ом̇ Виш̣н̣у-па̄да Ш́рӣла Гауракишора
@@ -635,7 +652,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
 
   <section id="prema-dhavani-4">
   <a href="#prema-dhavani-4" class="numerator">
-  <img loading="lazy" src="./img/bvthakur.jpg"/>
+  <img loading="lazy" src="./img/bvthakur.jpg" class="no-print"/>
   </a>
   <blockquote lang="ru">
   Джайа Ом̇ Виш̣н̣у-па̄да Ш́рӣла Сач-чид-ананда
@@ -656,7 +673,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
 
   <section id="prema-dhavani-5">
   <a href="#prema-dhavani-5" class="numerator">
-  <img loading="lazy" src="./img/jagannath-das.jpg"/>
+  <img loading="lazy" src="./img/jagannath-das.jpg" class="no-print"/>
   </a>
   <blockquote lang="ru">
   Джайа Ом̇ Виш̣н̣у-па̄да вайш̣н̣ава-са̄рвабхаума
@@ -677,7 +694,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
 
   <section id="prema-dhavani-6">
   <a href="#prema-dhavani-6" class="numerator">
-  <img loading="lazy" src="./img/goswamis.jpg"/>
+  <img loading="lazy" src="./img/goswamis.jpg" class="no-print"/>
   </a>
   <blockquote lang="ru">
   Джайа Ш́рӣ Рӯпа, Сана̄тана, Бхатта Рагхуна̄тха,
@@ -699,7 +716,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
 
   <section id="prema-dhavani-7">
   <a href="#prema-dhavani-7" class="numerator">
-  <img loading="lazy" src="./img/haridasa.jpg">
+  <img loading="lazy" src="./img/haridasa.jpg" class="no-print">
   </a>
   <blockquote lang="ru">
   На̄ма̄ча̄рйа Ш́рӣла Харида̄са&nbsp;Т̣ха̄кура<br>
@@ -719,7 +736,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
 
   <section id="prema-dhavani-8">
   <a href="#prema-dhavani-8" class="numerator">
-  <img loading="lazy" src="./img/tattva-2.jpg">
+  <img loading="lazy" src="./img/tattva-2.jpg" class="no-print">
   </a>
   <blockquote lang="ru">
   Премсе кахо Ш́рӣ-Кр̣иш̣н̣а-Чаитанйа,
@@ -742,7 +759,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
 
   <section id="prema-dhavani-9">
   <a href="#prema-dhavani-9" class="numerator">
-  <img loading="lazy" src="./img/radha-krishna.jpg">
+  <img loading="lazy" src="./img/radha-krishna.jpg" class="no-print">
   </a>
   <blockquote lang="ru">
   Ш́рӣ Ш́рӣ Ра̄дха̄-Кр̣ш̣н̣а, Гопа-Гопӣна̄тха,
@@ -763,7 +780,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
 
   <section id="prema-dhavani-10">
   <a href="#prema-dhavani-10" class="numerator">
-  <img src="img/dhama-2.jpg" loading="lazy"/>
+  <img src="img/dhama-2.jpg" loading="lazy" class="no-print"/>
   </a>
   <blockquote lang="ru">
   <span class="line">Ш́рӣ Майапур дха̄ма <small>— кӣ&nbsp;джайа!</small></span>
@@ -822,7 +839,7 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
   </section>
 
   <section id="prema-dhavani-12">
-  <a href="#prema-dhavani-12" class="numerator"><img loading="lazy" src="./img/congregation.jpg"/></a>
+  <a href="#prema-dhavani-12" class="numerator"><img loading="lazy" src="./img/congregation.jpg" class="no-print"/></a>
   <blockquote lang="ru">
   <span class="line">Вся слава собравшимся преданным</span>
   <span class="line">— Харе Кр̣иш̣н̣а <small>(3 раза)</small></span>
@@ -951,14 +968,14 @@ Oh Lord Krishna, Oh energy of the Lord, please engage me in Your devotional serv
 <p hidden><small>Примеры: <a href="https://soundcloud.com/iskconbangalore/tulasi-krishna-preyasi">ISKCON Bangalore</a></small></p>
 
 <section id="tulasi-pranama">
-<a href="#tulasi-pranama"><img  loading="lazy" src="./img/tulasi-devi.jpg"></a>
+<a href="#tulasi-pranama"><img  loading="lazy" src="./img/tulasi-devi.jpg" class="no-print"></a>
 <blockquote class="lower" lang="ru">
-<span class="line">Вр̣инда̄йаи Туласӣ-Девйаи прийа̄йаи&nbsp;Кеш́авасйа&nbsp;ча</span>
-<span class="line">Кр̣иш̣н̣а-бхакти-праде девӣ Сатйаватйаи намо&nbsp;намах̣</span>
+<span class="line">Вр̣инда̄йаи Туласӣ-Девйаи<br/> прийа̄йаи&nbsp;Кеш́авасйа&nbsp;ча</span>
+<span class="line">Кр̣иш̣н̣а-бхакти-праде девӣ<br/> Сатйаватйаи намо&nbsp;намах̣</span>
 </blockquote>
 <blockquote class="lower" lang="en">
-<span class="line">Vṛndāyai tulasī-devyai priyāyai keśavasya ca</span>
-<span class="line">viṣṇu-bhakti-prade devī satya vatyai namo namaḥ</span>
+<span class="line">Vṛndāyai tulasī-devyai<br/> priyāyai keśavasya ca</span>
+<span class="line">viṣṇu-bhakti-prade devī<br/> satya vatyai namo namaḥ</span>
 </blockquote>
 <p lang="ru">
 Вновь и вновь склоняюсь я перед Вриндой, Шримати Туласи Деви, которая очень дорога Господу Кешаве. О богиня, ты, знающая высочайшую истину, даруешь всем преданное служение Господу Кришне.
@@ -972,12 +989,12 @@ I offer my repeated obeisances unto Vrnda, Srimati Tulasi Devi, who is very dear
 <section id="tulasi-1">
 <a href="#tulasi-1" class="numerator">1</a>
 <blockquote class="lower" lang="ru">
-<span class="line">Намо намах̣ Туласӣ <span class="nobr">Кр̣иш̣н̣а-прейасӣ</span> намо намах̣ </span>
-<span class="line">Ра̄дха̄-Кр̣иш̣н̣а-сева̄ па̄бо эи&nbsp;абхила̄ш̣ӣ</span>
+<span class="line">Намо намах̣<br/> Туласӣ <span class="nobr">Кр̣иш̣н̣а-прейасӣ</span><br/> намо намах̣ </span>
+<span class="line">Ра̄дха̄-Кр̣иш̣н̣а-сева̄ па̄бо<br/> эи&nbsp;абхила̄ш̣ӣ</span>
 </blockquote>
 <blockquote class="lower" lang="en">
-<span class="line">namo namaḥ tulasī kṛṣṇa-preyasi namo namaḥ</span>
-<span class="line">rādhā-kṛṣṇa-sevā pābo ei abilāṣī</span>
+<span class="line">namo namaḥ<br/> tulasī kṛṣṇa-preyasi<br/> namo namaḥ</span>
+<span class="line">rādhā-kṛṣṇa-sevā pābo<br/> ei abilāṣī</span>
 </blockquote>
 <p lang="ru">
 О Туласи, возлюбленная Кришны, я вновь и вновь склоняюсь пред тобой. Я желаю обрести служение Шри Шри Радхе и Кришне.
@@ -990,12 +1007,12 @@ O Tulasi, beloved of Krsna, I bow before you again and again. My desire is to ob
 <section id="tulasi-2">
 <a href="#tulasi-2" class="numerator">2</a>
 <blockquote class="lower" lang="ru">
-<span class="line">Дже тома̄ра ш́аран̣а лой, <span class="nobr">та̄ра ва̄н̃чха̄ пӯрн̣а хой</span></span>
-<span class="line">Кр̣ипа̄ кори’ коро та̄ре <span class="nobr">Вр̣инда̄вана-ва̄сӣ</span></span>
+<span class="line">Дже тома̄ра ш́аран̣а лой,<br/> <span class="nobr">та̄ра ва̄н̃чха̄ пӯрн̣а хой</span></span>
+<span class="line">Кр̣ипа̄ кори’ коро та̄ре<br/> <span class="nobr">Вр̣инда̄вана-ва̄сӣ</span></span>
 </blockquote>
 <blockquote class="lower" lang="en">
-<span class="line">ye tomāra śaraṇa loy, tara vāñchā pūrṇa hoy</span>
-<span class="line">kṛpā kori' koro tāre vṛndāvana-vāsi</span>
+<span class="line">ye tomāra śaraṇa loy,<br/> tara vāñchā pūrṇa hoy</span>
+<span class="line">kṛpā kori' koro tāre<br/> vṛndāvana-vāsi</span>
 </blockquote>
 <p lang="ru">
 Ты исполняешь все желания того, кто избрал тебя своим прибежищем. Проливая на него свою милость, ты делаешь его жителем Вриндаваны.
@@ -1008,12 +1025,12 @@ Whoever takes shelter of you has his wishes fulfilled. Bestowing your mercy on h
 <section id="tulasi-3">
 <a href="#tulasi-3" class="numerator">3</a>
 <blockquote class="lower" lang="ru">
-<span class="line">Мор эи абхила̄ш̣, <span class="nobr">вила̄с кун̃дже дио ва̄с</span></span>
-<span class="line">Найане херибо сада̄ <span class="nobr">йугала-рӯпа-ра̄ш́и</span></span>
+<span class="line">Мор эи абхила̄ш̣,<br/> <span class="nobr">вила̄с кун̃дже дио ва̄с</span></span>
+<span class="line">Найане херибо сада̄<br/> <span class="nobr">йугала-рӯпа-ра̄ш́и</span></span>
 </blockquote>
 <blockquote class="lower" lang="en">
-<span class="line">mora ei abhilāṣa, vilāsa kuñje dio vāsa</span>
-<span class="line">nayana heribo sadā yugala-rūpa-rāśi</span>
+<span class="line">mora ei abhilāṣa,<br/> vilāsa kuñje dio vāsa</span>
+<span class="line">nayana heribo sadā<br/> yugala-rūpa-rāśi</span>
 </blockquote>
 <p lang="ru">
 Позволь же и мне поселиться в рощах наслаждения Вриндавана-дхамы, и тогда я смогу постоянно созерцать прекрасные игры Радхи и Кришны.
@@ -1026,12 +1043,12 @@ My desire is that you will also grant me a residence in the pleasure groves of S
 <section id="tulasi-4">
 <a href="#tulasi-4" class="numerator">4</a>
 <blockquote class="lower" lang="ru">
-<span class="line">Эи ниведана дхара, <span class="nobr">сакхӣр анугата коро</span></span>
-<span class="line">Сева̄-адхика̄ра дийе <span class="nobr">коро нӣджа да̄сӣ</span></span>
+<span class="line">Эи ниведана дхара,<br/> <span class="nobr">сакхӣр анугата коро</span></span>
+<span class="line">Сева̄-адхика̄ра дийе<br/> <span class="nobr">коро нӣджа да̄сӣ</span></span>
 </blockquote>
 <blockquote class="lower" lang="en">
-<span class="line">ei nivedana dhara, sakhīra anugata koro</span>
-<span class="line">sevā-adhikāra diye koro nīja dāsī</span>
+<span class="line">ei nivedana dhara,<br/> sakhīra anugata koro</span>
+<span class="line">sevā-adhikāra diye<br/> koro nīja dāsī</span>
 </blockquote>
 <p lang="ru">
 Молю тебя: сделай меня последователем пастушек Враджа. Даруй мне привилегию преданно служить Господу и сделай меня своей служанкой.
@@ -1044,12 +1061,12 @@ I beg you to make me a follower of the cowherd damsels of Vraja. Please give me 
 <section id="tulasi-5">
 <a href="#tulasi-5" class="numerator">5</a>
 <blockquote class="lower" lang="ru">
-<span class="line">Дӣна Кр̣ш̣н̣а-да̄се кой, <span class="nobr">эи джена мора хой</span></span>
-<span class="line">Ш́рӣ-Ра̄дха̄-Говинда-преме <span class="nobr">сада̄ джена бха̄си</span></span>
+<span class="line">Дӣна Кр̣ш̣н̣а-да̄се кой,<br/> <span class="nobr">эи джена мора хой</span></span>
+<span class="line">Ш́рӣ-Ра̄дха̄-Говинда-преме<br/> <span class="nobr">сада̄ джена бха̄си</span></span>
 </blockquote>
 <blockquote class="lower" lang="en">
-<span class="line">dīna kṛṣṇa-dāse koy, ei yena mora hoy</span>
-<span class="line">śrī-rādhā-govinda-preme sadā yena bhāsi</span>
+<span class="line">dīna kṛṣṇa-dāse koy,<br/> ei yena mora hoy</span>
+<span class="line">śrī-rādhā-govinda-preme<br/> sadā yena bhāsi</span>
 </blockquote>
 <p lang="ru">
 Я, падший, недостойный слуга Кришны молю даровать мне возможность вечно плавать в океане любви Шри Радхи и Говинды.
@@ -1060,14 +1077,14 @@ I beg you to make me a follower of the cowherd damsels of Vraja. Please give me 
 </section>
 
 <section id="tulasi-pradaksina">
-<a href="#tulasi-pradaksina"><img src="./img/tulasi-mayapur.png" loading="lazy"/></a>
+<a href="#tulasi-pradaksina"><img src="./img/tulasi-mayapur.png" loading="lazy" class="no-print"/></a>
 <blockquote class="lower" lang="ru">
-<span class="line">Йа̄ни ка̄ни ча па̄па̄ни <span class="nobr">брахма-хатйа̄дика̄ни ча</span></span>
-<span class="line">Та̄ни та̄ни пран̣аш́йанти <span class="nobr">прадакш̣ин̣ах̣ паде паде</span></span>
+<span class="line">Йа̄ни ка̄ни ча па̄па̄ни<br/> <span class="nobr">брахма-хатйа̄дика̄ни ча</span></span>
+<span class="line">Та̄ни та̄ни пран̣аш́йанти<br/> <span class="nobr">прадакш̣ин̣ах̣ паде паде</span></span>
 </blockquote>
 <blockquote class="lower" lang="en">
-<span class="line">yāni kāni ca pāpāni brahma-hatyādikāni ca</span>
-<span class="line">tāni tāni praṇaśyanti pradakṣiṇaḥ pade pade</span>
+<span class="line">yāni kāni ca pāpāni<br/> brahma-hatyādikāni ca</span>
+<span class="line">tāni tāni praṇaśyanti<br/> pradakṣiṇaḥ pade pade</span>
 </blockquote>
 <p lang="ru">
 Обходя вокруг Туласи-деви, человек с каждым шагом избавляется от всех грехов, какие только можно совершить, — даже от такого греха, как убийство брахмана.
@@ -1270,7 +1287,7 @@ Moment comparable to yuga, eyes showering tears, empty appears whole world to me
 <p lang="en">
 By embracing with enraptment or trampling with feet, or breaking my heart by not granting vision, or flirting here and there as destined, master of my life is he, verily no other.
 </p>
-<img src="./img/lotus-feet-2.jpg" loading="lazy" width="400"/>
+<img src="./img/lotus-feet-2.jpg" loading="lazy" width="400" class="no-print"/>
 </section>
 
 <section id="siksastaka-x">
